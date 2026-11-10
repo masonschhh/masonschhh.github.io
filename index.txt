@@ -34,4 +34,4 @@ f:"PhotographyArchive"
 1c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 21:I[27201,["$2"],"IconMark"]
 19:null
-1f:[["$","title","0",{"children":"Mason Schindler — Portfolio"}],["$","meta","1",{"name":"description","content":"Design, Fotografie, Film und Podcast von Mason Schindler. Projekte aus Schule, ÜK und Fotografie."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"icon","href":"/icon.svg?icon.30kl-_4hglslo.svg","sizes":"any","type":"image/svg+xml"}],["$","$L21","4",{}]]
+1f:[["$","title","0",{"children":"Mason Schindler — Portfolio"}],["$","meta","1",{"name":"description","content":"Design, Fotografie, Film und Podcast von Mason Schindler. Projekte aus Schule, ÜK und Fotografie."}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"icon","href":"/icon.svg?icon.30kl-_4hglslo.svg","sizes":"any","type":"image/svg+xml"}],["$","$L21","4",{}]]

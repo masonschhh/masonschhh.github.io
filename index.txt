@@ -2,37 +2,36 @@
 2:"/_next/static/chunks/3qfy96eoyh-ek.js"
 3:I[39756,["$2"],"default"]
 4:I[37457,["$2"],"default"]
-6:"/_next/static/chunks/3gsdhs4m5dwbm.js"
+6:"/_next/static/chunks/1s5rtwnl5c79e.js"
 7:I[72776,["$2","$6"],"Navigation"]
 8:I[72776,["$2","$6"],"CustomCursor"]
 9:"ChapterAtmosphere"
 a:I[17488,["$2","$6"],"$9"]
 b:I[92349,["$2","$6"],"Hero"]
-c:"CreativeIdentity"
-d:I[92349,["$2","$6"],"$c"]
-e:I[30382,["$2","$6"],"DoorLobby"]
-f:"SelectedProjects"
-10:I[44413,["$2","$6"],"$f"]
-11:"PhotographyArchive"
-12:I[21846,["$2","$6"],"$11"]
-13:I[63312,["$2","$6"],"Cinema"]
-14:I[53250,["$2","$6"],"AudioArchive"]
-15:I[35670,["$2","$6"],"Playground"]
-16:I[26564,["$2","$6"],"ArchiveIndex"]
-17:I[65731,["$2","$6"],"AboutProfile"]
-18:I[65731,["$2","$6"],"ContactExit"]
-19:I[97367,["$2"],"OutletBoundary"]
-1a:"$Sreact.suspense"
-1c:"ViewportBoundary"
-1d:I[97367,["$2"],"$1c"]
-1f:"MetadataBoundary"
-20:I[97367,["$2"],"$1f"]
-22:I[68027,["$2"],"default",1]
-:HL["/_next/static/chunks/3ywpjavfk4z3u.css","style"]
+c:I[30382,["$2","$6"],"DoorLobby"]
+d:"SelectedProjects"
+e:I[44413,["$2","$6"],"$d"]
+f:"PhotographyArchive"
+10:I[21846,["$2","$6"],"$f"]
+11:I[63312,["$2","$6"],"Cinema"]
+12:I[53250,["$2","$6"],"AudioArchive"]
+13:I[35670,["$2","$6"],"Playground"]
+14:I[26564,["$2","$6"],"ArchiveIndex"]
+15:I[65731,["$2","$6"],"AboutProfile"]
+16:I[65731,["$2","$6"],"ContactExit"]
+17:I[97367,["$2"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:"ViewportBoundary"
+1b:I[97367,["$2"],"$1a"]
+1d:"MetadataBoundary"
+1e:I[97367,["$2"],"$1d"]
+20:I[68027,["$2"],"default",1]
+:HL["/_next/static/chunks/3pmq0_u6z45d0.css","style"]
+:HL["/_next/static/chunks/2180nl_t1x0fd.css","style"]
 :HC["/",""]
-5:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[[["$","$L7",null,{}],["$","$L8",null,{}],["$","$La",null,{}],["$","main",null,{"id":"main","children":[["$","$Lb",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$L10",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","$L18",null,{}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/3gsdhs4m5dwbm.js","async":true,"nonce":"$undefined"}]],["$","$L19",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]]}],"p":false,"v":null}}]]
-0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3ywpjavfk4z3u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3qfy96eoyh-ek.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"de-CH","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],"p":false,"v":null},"c":"$Q5"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1a",null,{"name":"Next.Metadata","children":"$L21"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$22",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3ywpjavfk4z3u.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"c00u7jCchUOphtKOULLkR"}
-1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-23:I[27201,["$2"],"IconMark"]
-1b:null
-21:[["$","title","0",{"children":"Mason Schindler — Portfolio"}],["$","meta","1",{"name":"description","content":"Design, Fotografie, Film und Podcast von Mason Schindler. Eine persönliche Ausstellung."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"icon","href":"/icon.svg?icon.30kl-_4hglslo.svg","sizes":"any","type":"image/svg+xml"}],["$","$L23","4",{}]]
+5:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[[["$","$L7",null,{}],["$","$L8",null,{}],["$","$La",null,{}],["$","main",null,{"id":"main","children":[["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Le",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/1s5rtwnl5c79e.js","async":true,"nonce":"$undefined"}]],["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3pmq0_u6z45d0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/2180nl_t1x0fd.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3qfy96eoyh-ek.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"de-CH","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],"p":false,"v":null},"c":"$Q5"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1b",null,{"children":"$L1c"}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$18",null,{"name":"Next.Metadata","children":"$L1f"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$20",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3pmq0_u6z45d0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/2180nl_t1x0fd.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"Qhqusn1eElCuJ0bC_6NZs"}
+1c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+21:I[27201,["$2"],"IconMark"]
+19:null
+1f:[["$","title","0",{"children":"Mason Schindler — Portfolio"}],["$","meta","1",{"name":"description","content":"Design, Fotografie, Film und Podcast von Mason Schindler. Projekte aus Schule, ÜK und Fotografie."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"icon","href":"/icon.svg?icon.30kl-_4hglslo.svg","sizes":"any","type":"image/svg+xml"}],["$","$L21","4",{}]]

@@ -22,21 +22,22 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#arbeiten">Zum Inhalt springen</a>
+<a class="skip" href="#raeume">Zum Inhalt springen</a>
 
 <header class="nav" id="nav">
   <a class="brand" href="#start" aria-label="Nach oben">ms</a>
   <nav aria-label="Hauptnavigation">
-    <a href="#arbeiten">Arbeiten</a>
-    <a href="#fotos">Fotos</a>
-    <a href="#kino">Film & Audio</a>
-    <a href="#cv">CV</a>
+    <a href="#raeume" data-foyer>Räume</a>
+    <a href="#cv" data-foyer>CV</a>
   </nav>
-  <a class="nav-cta" href="#kontakt">Schreib mir <span aria-hidden="true">↗</span></a>
+  <button type="button" class="nav-exit" id="navExit" hidden><span aria-hidden="true">←</span> Zurück ins Foyer</button>
+  <span class="nav-room mono" id="navRoom"></span>
+  <a class="nav-cta" href="#kontakt" data-foyer>Schreib mir <span aria-hidden="true">↗</span></a>
   <i class="nav-progress" aria-hidden="true"></i>
 </header>
 
 <main>
+<div id="foyer">
 <!-- 00 START -->
 <section class="hero" id="start">
   <div class="hero-top mono"><span>Portfolio & CV</span><span>Nahe Luzern, Schweiz</span></div>
@@ -54,7 +55,8 @@
   </div>
 
   <!-- Die Türen: ein Raum pro Disziplin. Hover/Fokus öffnet, Klick führt hinein. -->
-  <div class="rooms" aria-label="Räume">
+  <p class="rooms-label mono"><span>Das Foyer</span><span>Wähle eine Tür</span></p>
+  <div class="rooms" id="raeume" aria-label="Räume – nur durch die Türen erreichbar">
     <a class="door" href="#arbeiten" style="--tone:#d9cbb0">
       <span class="door-inside"><img src="/images-shift-page-7.webp" alt="" loading="lazy"></span>
       <span class="door-leaf"><span class="mono">Raum 01</span><strong>Atelier</strong><i class="knob"></i></span>
@@ -77,70 +79,10 @@
     </a>
   </div>
 </section>
-
-<!-- 01 ARBEITEN -->
-<section class="section work" id="arbeiten">
-  <div class="sec-head"><span class="mono">01 / Atelier</span><h2>Ausgewählte <em>Arbeiten.</em></h2><p>Drei Designprojekte aus der Ausbildung. Antippen öffnet die ganze Arbeit.</p></div>
-  <div class="cases">
-    <button class="case" data-case="shift">
-      <span class="case-img"><img src="/images-shift-page-1.webp" alt="Titelseite des SHIFT-Gestaltungskonzepts für Plantinos" loading="lazy"></span>
-      <span class="case-meta mono"><span>001</span><span>2026</span></span>
-      <span class="case-title">SHIFT <em>– Plantinos</em></span>
-      <span class="case-tags">Markenentwicklung · Verpackung · Social Media</span>
-    </button>
-    <button class="case" data-case="ew-hoefe">
-      <span class="case-img"><img src="/images-ew-hoefe-page-1.webp" alt="Titelseite des Magazins Connected für EW Höfe" loading="lazy"></span>
-      <span class="case-meta mono"><span>002</span><span>2025</span></span>
-      <span class="case-title">Connected <em>– EW Höfe</em></span>
-      <span class="case-tags">Magazin · Editorial Design</span>
-    </button>
-    <button class="case" data-case="luzern">
-      <span class="case-img"><img src="/images-luzern-plakat-page-1.webp" alt="F200-Plakat für Kurzferien in Luzern" loading="lazy"></span>
-      <span class="case-meta mono"><span>003</span><span>2025–2026</span></span>
-      <span class="case-title">Luzern <em>entdecken</em></span>
-      <span class="case-tags">Plakat · Infografik</span>
-    </button>
-  </div>
-</section>
-
-<!-- 02 FOTOS -->
-<section class="section darkroom" id="fotos">
-  <div class="sec-head"><span class="mono">02 / Dunkelkammer</span><h2>Foto&shy;grafie<em>.</em></h2><p>Natur, Bildmontage und eine Serie über Oldtimer. Antippen für Vollbild und Aufnahmedaten.</p></div>
-  <div class="strip" id="strip" tabindex="0" aria-label="Fotos, seitlich scrollbar"></div>
-  <div class="strip-ctrl"><button type="button" data-strip="-1" aria-label="Zurück">←</button><span class="mono" id="stripCount">01 / 08</span><button type="button" data-strip="1" aria-label="Weiter">→</button></div>
-</section>
-
-<!-- 03 KINO & HÖRRAUM -->
-<section class="section cinema" id="kino">
-  <div class="sec-head"><span class="mono">03 / Kinosaal</span><h2>Bilder in <em>Bewegung.</em></h2></div>
-  <div class="screen">
-    <div class="screen-frame">
-      <video id="film" controls playsinline preload="none" poster="/images-projects-uek-video.jpg"><source src="/video-uek-modul-267.mp4" type="video/mp4"></video>
-    </div>
-    <div class="reels" role="tablist" aria-label="Filme">
-      <button role="tab" aria-selected="true" data-film="0"><span class="mono">Film 01 · 3:13</span><strong>ÜK – Modul 267</strong><small>Videoprojekt aus dem überbetrieblichen Kurs.</small></button>
-      <button role="tab" aria-selected="false" data-film="1"><span class="mono">Film 02 · 2:53</span><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm: Konzept, Illustration, Animation, Voice-over und Postproduktion. Schulprojekt Modul 266.</small></button>
-    </div>
-  </div>
-
-  <div class="podcast" id="podcast">
-    <div class="podcast-copy"><span class="mono">04 / Hörraum</span><h3>SwissSkills.<br><em>Chiara zu Gast.</em></h3><p>Mein eigener Schul-Podcast. Ich führe durch die Folge, Chiara ist zu Gast. 25:49 Minuten.</p></div>
-    <div class="player">
-      <button type="button" class="vinyl" id="podPlay" aria-label="Podcast abspielen"><span>ms<small>Seite A</small></span></button>
-      <div class="player-body">
-        <div class="mono player-top"><span><i class="dot"></i><span id="podState">Bereit</span></span><span>Folge 001</span></div>
-        <div class="wave" id="wave" aria-hidden="true"></div>
-        <input type="range" id="podSeek" min="0" max="1549" step="1" value="0" aria-label="Wiedergabeposition">
-        <div class="mono player-time"><span id="podTime">0:00</span><span id="podDur">25:49</span></div>
-      </div>
-      <audio id="pod" preload="none" src="/audio-swissskills-mason-chiara.mp3"></audio>
-    </div>
-  </div>
-</section>
-
-<!-- 04 CV -->
+<div class="dossier">
+<!-- 05 CV -->
 <section class="section cv" id="cv">
-  <div class="sec-head"><span class="mono">05 / Lebenslauf</span><h2>Über <em>mich.</em></h2></div>
+  <div class="sec-head"><span class="mono room-sign"><b>Dossier</b><span>Lebenslauf</span><span>Stand 2026</span></span><h2>Über <em>mich.</em></h2></div>
   <div class="cv-grid">
     <figure class="cv-photo"><img src="/images-portraits-portrait.webp" alt="Porträt von Mason Schindler" loading="lazy"><figcaption class="mono">Mason Schindler · 18 · Nähe Luzern</figcaption></figure>
     <div class="cv-body">
@@ -181,7 +123,7 @@
 
 <!-- 05 KONTAKT -->
 <section class="section contact" id="kontakt">
-  <div class="contact-head"><span class="mono">06 / Kontakt</span><h2>Schreib <em>mir.</em></h2><p>Für ein Projekt, ein Shooting oder eine Frage.</p><a class="mail" href="mailto:mace.schindler@icloud.com">mace.schindler@icloud.com ↗</a></div>
+  <div class="contact-head"><span class="mono">Kontakt</span><h2>Schreib <em>mir.</em></h2><p>Für ein Projekt, ein Shooting oder eine Frage.</p><a class="mail" href="mailto:mace.schindler@icloud.com">mace.schindler@icloud.com ↗</a></div>
   <form class="form" id="form" novalidate>
     <div class="hp" aria-hidden="true"><label>Bitte leer lassen<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
     <label>Name *<input name="name" autocomplete="name" required maxlength="100" placeholder="Wie heisst du?"></label>
@@ -199,6 +141,99 @@
     <p class="status full" id="formStatus" role="status"></p>
   </form>
 </section>
+</div>
+</div><!-- /foyer -->
+
+<div id="roomsView">
+
+<!-- 01 ARBEITEN -->
+<section class="section room work" id="arbeiten" hidden>
+  <div class="sec-head"><span class="mono room-sign"><b>Raum 01</b><span>Das Atelier</span><span>Design</span></span><h2>Ausgewählte <em>Arbeiten.</em></h2><p>Drei Designprojekte aus der Ausbildung. Antippen öffnet die ganze Arbeit.</p></div>
+  <div class="cases">
+    <button class="case" data-case="shift">
+      <span class="case-img"><img src="/images-shift-page-1.webp" alt="Titelseite des SHIFT-Gestaltungskonzepts für Plantinos" loading="lazy"></span>
+      <span class="case-meta mono"><span>001</span><span>2026</span></span>
+      <span class="case-title">SHIFT <em>– Plantinos</em></span>
+      <span class="case-tags">Markenentwicklung · Verpackung · Social Media</span>
+    </button>
+    <button class="case" data-case="ew-hoefe">
+      <span class="case-img"><img src="/images-ew-hoefe-page-1.webp" alt="Titelseite des Magazins Connected für EW Höfe" loading="lazy"></span>
+      <span class="case-meta mono"><span>002</span><span>2025</span></span>
+      <span class="case-title">Connected <em>– EW Höfe</em></span>
+      <span class="case-tags">Magazin · Editorial Design</span>
+    </button>
+    <button class="case" data-case="luzern">
+      <span class="case-img"><img src="/images-luzern-plakat-page-1.webp" alt="F200-Plakat für Kurzferien in Luzern" loading="lazy"></span>
+      <span class="case-meta mono"><span>003</span><span>2025–2026</span></span>
+      <span class="case-title">Luzern <em>entdecken</em></span>
+      <span class="case-tags">Plakat · Infografik</span>
+    </button>
+  </div>
+
+  <div class="room-exit">
+    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
+    <a class="door door-next" href="#fotos" style="--tone:#2a2622" aria-label="Nächste Tür: Die Dunkelkammer"><span class="door-leaf dark"><span class="mono">Nächste Tür</span><strong>Die Dunkel&shy;kammer</strong><i class="knob"></i></span></a>
+  </div>
+</section>
+
+<!-- 02 FOTOS -->
+<section class="section room darkroom" id="fotos" hidden>
+  <i class="safelight" aria-hidden="true"></i>
+  <div class="sec-head"><span class="mono room-sign"><b>Raum 02</b><span>Die Dunkelkammer</span><span>Achtung, Licht</span></span><h2>Foto&shy;grafie<em>.</em></h2><p>Natur, Bildmontage und eine Serie über Oldtimer. Antippen für Vollbild und Aufnahmedaten.</p></div>
+  <div class="strip" id="strip" tabindex="0" aria-label="Fotos, seitlich scrollbar"></div>
+  <div class="strip-ctrl"><button type="button" data-strip="-1" aria-label="Zurück">←</button><span class="mono" id="stripCount">01 / 08</span><button type="button" data-strip="1" aria-label="Weiter">→</button></div>
+
+  <div class="room-exit">
+    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
+    <a class="door door-next" href="#kino" style="--tone:#5a1f1a" aria-label="Nächste Tür: Der Kinosaal"><span class="door-leaf red"><span class="mono">Nächste Tür</span><strong>Der Kinosaal</strong><i class="knob"></i></span></a>
+  </div>
+</section>
+
+<!-- 03 KINO & HÖRRAUM -->
+<section class="section room cinema" id="kino" hidden>
+  <i class="beam" aria-hidden="true"></i>
+  <div class="sec-head"><span class="mono room-sign"><b>Raum 03</b><span>Der Kinosaal</span><span>Heute im Programm</span></span><h2>Bilder in <em>Bewegung.</em></h2></div>
+  <div class="screen">
+    <div class="screen-frame">
+      <video id="film" controls playsinline preload="none" poster="/images-projects-uek-video.jpg"><source src="/video-uek-modul-267.mp4" type="video/mp4"></video>
+    </div>
+    <div class="reels" role="tablist" aria-label="Filme">
+      <button role="tab" aria-selected="true" data-film="0"><span class="mono">Film 01 · 3:13</span><strong>ÜK – Modul 267</strong><small>Videoprojekt aus dem überbetrieblichen Kurs.</small></button>
+      <button role="tab" aria-selected="false" data-film="1"><span class="mono">Film 02 · 2:53</span><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm: Konzept, Illustration, Animation, Voice-over und Postproduktion. Schulprojekt Modul 266.</small></button>
+    </div>
+  </div>
+
+
+  <div class="room-exit">
+    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
+    <a class="door door-next" href="#podcast" style="--tone:#6f8467" aria-label="Nächste Tür: Der Hörraum"><span class="door-leaf green"><span class="mono">Nächste Tür</span><strong>Der Hörraum</strong><i class="knob"></i></span></a>
+  </div>
+</section>
+<!-- 04 HÖRRAUM -->
+<section class="section room studio" id="podcast" hidden>
+  <div class="sec-head"><span class="mono room-sign"><b>Raum 04</b><span>Der Hörraum</span><span class="onair-sign" id="onAir">On Air</span></span><h2>Hör <em>rein.</em></h2></div>
+  <div class="podcast">
+    <div class="podcast-copy"><h3>SwissSkills.<br><em>Chiara zu Gast.</em></h3><p>Mein eigener Schul-Podcast. Ich führe durch die Folge, Chiara ist zu Gast. 25:49 Minuten.</p></div>
+    <div class="player">
+      <button type="button" class="vinyl" id="podPlay" aria-label="Podcast abspielen"><span>ms<small>Seite A</small></span></button>
+      <div class="player-body">
+        <div class="mono player-top"><span><i class="dot"></i><span id="podState">Bereit</span></span><span>Folge 001</span></div>
+        <div class="wave" id="wave" aria-hidden="true"></div>
+        <input type="range" id="podSeek" min="0" max="1549" step="1" value="0" aria-label="Wiedergabeposition">
+        <div class="mono player-time"><span id="podTime">0:00</span><span id="podDur">25:49</span></div>
+      </div>
+      <audio id="pod" preload="none" src="/audio-swissskills-mason-chiara.mp3"></audio>
+    </div>
+  </div>
+
+  <div class="room-exit">
+    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
+    <a class="door door-next" href="#arbeiten" style="--tone:#d9cbb0" aria-label="Nächste Tür: Das Atelier"><span class="door-leaf"><span class="mono">Nächste Tür</span><strong>Das Atelier</strong><i class="knob"></i></span></a>
+  </div>
+</section>
+
+
+</div>
 </main>
 
 <footer class="foot mono"><a href="#start" class="brand">ms</a><span>© 2026 Mason Schindler</span><a href="#start">Nach oben ↑</a></footer>

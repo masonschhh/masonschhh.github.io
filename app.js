@@ -59,28 +59,22 @@ $$("dialog").forEach(d => {
   d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-close]")) closeDialog(d); });
 });
 
-/* ---------- Navigation ---------- */
+/* ---------- Navigation (Foyer) ---------- */
 const nav = $("#nav"), progress = $(".nav-progress");
-const links = $$(".nav nav a");
-const sections = links.map(a => $(a.getAttribute("href")));
 let ticking = false;
 function onScroll() {
   ticking = false;
   const max = document.documentElement.scrollHeight - innerHeight;
   progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
   nav.classList.toggle("scrolled", scrollY > 10);
-  const under = document.elementsFromPoint(innerWidth / 2, 70).find(el => el.closest?.(".darkroom,.cinema"));
-  nav.classList.toggle("on-dark", !!under);
-  let current = -1;
-  sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) current = i; });
-  links.forEach((a, i) => a.classList.toggle("active", i === current));
 }
 addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
 
 /* ---------- Einblenden ---------- */
+let io = null;
 if (!reduced && "IntersectionObserver" in window) {
-  const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
   $$(".sec-head, .case, .screen, .podcast, .cv-photo, .cv-block, .cv-lead, .contact-head, .form").forEach((el, i) => {
     el.classList.add("reveal");
     el.style.transitionDelay = el.classList.contains("case") ? `${(i % 3) * 90}ms` : "";
@@ -88,20 +82,94 @@ if (!reduced && "IntersectionObserver" in window) {
   });
 }
 
-/* ---------- Türen ---------- */
+/* ---------- Räume: nur durch Türen erreichbar ---------- */
+const foyer = $("#foyer");
+const roomInfo = {
+  arbeiten: { name: "Raum 01 · Das Atelier", bg: "#eee8db", nav: "room-light" },
+  fotos: { name: "Raum 02 · Die Dunkelkammer", bg: "#141414", nav: "room-dark" },
+  kino: { name: "Raum 03 · Der Kinosaal", bg: "#120e0c", nav: "room-dark" },
+  podcast: { name: "Raum 04 · Der Hörraum", bg: "#38483e", nav: "room-green" },
+};
+let currentRoom = null, busy = false;
+function stopMedia() { $("#film").pause(); $("#pod").pause(); }
+function showView(id) {
+  stopMedia();
+  currentRoom = roomInfo[id] ? id : null;
+  foyer.hidden = !!currentRoom;
+  Object.keys(roomInfo).forEach(r => { $("#" + r).hidden = r !== currentRoom; });
+  document.body.classList.toggle("in-room", !!currentRoom);
+  $("#navExit").hidden = !currentRoom;
+  $("#navRoom").textContent = currentRoom ? roomInfo[currentRoom].name : "";
+  nav.classList.remove("room-light", "room-dark", "room-green");
+  if (currentRoom) nav.classList.add(roomInfo[currentRoom].nav);
+  document.title = currentRoom ? `${roomInfo[currentRoom].name.split(" · ")[1]} — Mason Schindler` : "Mason Schindler — Portfolio & CV";
+}
+// Ein Vorhang in der Farbe des Raums wächst aus der Tür und füllt den Bildschirm.
+function threshold(fromRect, color, done) {
+  if (reduced || !fromRect) { done(); return; }
+  const t = document.createElement("div");
+  t.className = "threshold";
+  t.style.background = color;
+  const px = v => `${Math.round(v)}px`;
+  t.style.inset = `${px(fromRect.top)} ${px(innerWidth - fromRect.right)} ${px(innerHeight - fromRect.bottom)} ${px(fromRect.left)}`;
+  document.body.append(t);
+  requestAnimationFrame(() => requestAnimationFrame(() => { t.style.inset = "0px"; }));
+  setTimeout(() => {
+    done();
+    t.style.opacity = "0";
+    setTimeout(() => t.remove(), 400);
+  }, 720);
+}
+function enterRoom(id, door) {
+  if (busy || !roomInfo[id]) return;
+  busy = true;
+  if (door && !reduced) door.classList.add("open");
+  const go = () => threshold(door?.getBoundingClientRect(), roomInfo[id].bg, () => {
+    showView(id);
+    scrollTo(0, 0);
+    if (location.hash !== "#" + id) history.pushState({ room: id }, "", "#" + id);
+    $("#" + id).querySelector("h2")?.setAttribute("tabindex", "-1");
+    $("#" + id).querySelector("h2")?.focus({ preventScroll: true });
+    door?.classList.remove("open");
+    busy = false;
+  });
+  reduced ? go() : setTimeout(go, 420);
+}
+function exitRoom(push = true) {
+  if (!currentRoom || busy) return;
+  const from = currentRoom;
+  busy = true;
+  threshold({ top: innerHeight / 2, bottom: innerHeight / 2, left: innerWidth / 2, right: innerWidth / 2 }, "#f1eee7", () => {
+    showView(null);
+    if (push) history.pushState(null, "", location.pathname);
+    const door = $(`.rooms .door[href="#${from}"]`);
+    $("#raeume").scrollIntoView({ block: "center" });
+    door?.focus({ preventScroll: true });
+    busy = false;
+  });
+}
 $$(".door").forEach(door => door.addEventListener("click", e => {
-  const target = $(door.getAttribute("href"));
-  if (!target) return;
   e.preventDefault();
-  const go = () => {
-    target.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
-    history.replaceState(null, "", door.getAttribute("href"));
-  };
-  if (reduced) return go();
-  door.classList.add("open");
-  setTimeout(go, 520);
-  setTimeout(() => door.classList.remove("open"), 1400);
+  enterRoom(door.getAttribute("href").slice(1), door);
 }));
+$$("[data-exit]").forEach(b => b.addEventListener("click", () => exitRoom()));
+$("#navExit").addEventListener("click", () => exitRoom());
+$(".brand", nav).addEventListener("click", e => { if (currentRoom) { e.preventDefault(); exitRoom(); } });
+addEventListener("popstate", () => {
+  const id = location.hash.slice(1);
+  if (roomInfo[id]) { showView(id); scrollTo(0, 0); }
+  else if (currentRoom) { busy = false; exitRoom(false); }
+});
+// Direkter Link auf einen Raum: im Foyer starten und die passende Tür öffnen.
+(() => {
+  const id = location.hash.slice(1);
+  if (!roomInfo[id]) return;
+  history.replaceState(null, "", location.pathname);
+  const door = $(`.rooms .door[href="#${id}"]`);
+  door.scrollIntoView({ block: "center" });
+  setTimeout(() => enterRoom(id, door), 500);
+})();
+addEventListener("keydown", e => { if (e.key === "Escape" && currentRoom && !$$("dialog").some(d => d.open)) exitRoom(); });
 
 /* ---------- Projektansicht ---------- */
 const caseDialog = $("#caseDialog");
@@ -149,7 +217,7 @@ lb.addEventListener("touchend", e => { if (touchX === null) return; const dx = e
 const strip = $("#strip");
 photos.forEach((p, i) => {
   const b = document.createElement("button");
-  b.type = "button"; b.className = "shot";
+  b.type = "button"; b.className = "shot"; b.dataset.code = `${String(i + 1).padStart(2, "0")} / ${p.sub.split(" · ")[0].toUpperCase()}`;
   b.setAttribute("aria-label", `${p.title} ansehen`);
   b.innerHTML = `<img src="${p.src}" alt="${p.alt}" loading="${i < 2 ? "eager" : "lazy"}"><figcaption><b>${p.title}</b><span class="mono">${p.sub}</span></figcaption>`;
   b.addEventListener("click", () => openLightbox(photos, i));
@@ -205,7 +273,8 @@ pod.addEventListener("timeupdate", syncPod);
 pod.addEventListener("loadedmetadata", syncPod);
 seek.addEventListener("input", () => { pod.currentTime = +seek.value; syncPod(); });
 video.addEventListener("play", () => pod.pause());
-pod.addEventListener("play", () => video.pause());
+pod.addEventListener("play", () => { video.pause(); $("#onAir").classList.add("lit"); });
+pod.addEventListener("pause", () => $("#onAir").classList.remove("lit"));
 
 /* ---------- Kontaktformular ---------- */
 const form = $("#form"), status = $("#formStatus"), send = $(".send", form);

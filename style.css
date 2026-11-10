@@ -287,3 +287,141 @@ body.locked{overflow:hidden}
   .reveal{opacity:1;transform:none}
 }
 .sn-field canvas:focus-visible{outline:none}
+
+/* ================= RÄUME ================= */
+.rooms-label{display:flex;justify-content:space-between;color:var(--muted);border-top:1px solid var(--ink);padding-top:12px;margin:0 0 18px}
+#roomsView>section[hidden],#foyer[hidden]{display:none}
+.room{max-width:none;min-height:100svh;position:relative;isolation:isolate;padding-top:clamp(100px,12vw,140px)}
+.room>*:not(.safelight):not(.beam){max-width:calc(var(--max) - 2*var(--pad));margin-left:auto;margin-right:auto;position:relative}
+.room-sign{display:flex;gap:18px;flex-wrap:wrap;align-items:center;border-top:0!important;padding-top:0!important}
+.room-sign b{font-weight:700;border:1px solid currentColor;padding:6px 9px}
+.room-sign span:last-child{margin-left:auto}
+.room-exit{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-top:clamp(70px,10vw,120px)!important;padding-top:26px;border-top:1px solid color-mix(in srgb,currentColor 25%,transparent)}
+.exit-foyer{border:1px solid currentColor;border-radius:99px;padding:12px 18px;font-weight:500;font-size:14px;transition:background .25s,color .25s}
+.door-next{width:clamp(120px,14vw,170px);aspect-ratio:3/4;flex:0 0 auto;padding-bottom:0}
+.door-next .door-leaf strong{font-size:clamp(17px,1.6vw,22px)}
+.door-next:hover .door-leaf{transform:rotateY(-40deg)}
+
+/* 01 Atelier – Papier, Schneidematte, Lineal */
+.work{background:#eee8db;color:var(--ink);border-top:14px solid #ddd3bf}
+.work::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+  background-image:repeating-linear-gradient(0deg,transparent 0 47px,#8979612a 48px),repeating-linear-gradient(90deg,transparent 0 47px,#89796114 48px)}
+.work::after{content:"";position:absolute;top:0;left:0;right:0;height:22px;z-index:-1;background:repeating-linear-gradient(90deg,#8a7a62 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,#8a7a62 0 1px,transparent 1px 60px);background-size:auto 7px,auto 14px;background-repeat:repeat-x;opacity:.5}
+.work .room-sign b{background:#e4dccb}
+.work .exit-foyer:hover{background:var(--ink);color:#eee8db}
+.cases{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:auto}
+.case{display:grid;grid-template-rows:subgrid;grid-row:span 4;gap:10px;background:#f6f1e6;padding:14px 14px 18px;box-shadow:0 1px 0 #cfc4ae,0 14px 30px #5b49351a;transition:transform .4s var(--ease),box-shadow .4s}
+.case:hover{transform:translateY(-4px) rotate(-.3deg);box-shadow:0 1px 0 #cfc4ae,0 22px 40px #5b493526}
+.case-img,.case:first-child .case-img{aspect-ratio:4/5}
+.case-img img{object-position:50% 0}
+.case:first-child .case-img img{object-position:12% 50%}
+
+/* 02 Dunkelkammer – Rotlicht, Korn, Abzüge */
+.darkroom{color:#e9e4da;background:radial-gradient(ellipse at 85% 0,#8a2a1e55,transparent 50%),radial-gradient(ellipse at 10% 100%,#5a1a1230,transparent 55%),#141414;border-top:18px solid #0b0b0c}
+.darkroom::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(#fff2 .5px,transparent .8px);background-size:4px 4px;opacity:.25;pointer-events:none}
+.safelight{position:absolute;top:34px;right:var(--pad);width:54px;height:8px;border-radius:5px;background:#d4513c;box-shadow:0 0 40px 18px #c2402c44;animation:blink 3.5s infinite}
+.darkroom .sec-head .mono,.darkroom .sec-head p{color:#c6b5ad}
+.darkroom .room-sign b{color:#e06a55}
+.shot{background:#e6e0d4;padding:10px 10px 34px;box-shadow:0 5px 8px #0007,0 20px 40px #0007}
+.shot img{height:100%;max-width:calc(86vw - 20px)}
+.shot figcaption{left:10px;right:10px;bottom:34px}
+.shot::after{content:attr(data-code);position:absolute;left:12px;bottom:10px;font:500 9px/1 var(--sans);letter-spacing:.14em;color:#756651}
+.strip{padding-top:14px;padding-bottom:30px;background:linear-gradient(#0000 0 6px,transparent 6px),repeating-linear-gradient(90deg,#b8aea440 0 12px,transparent 12px 28px) 0 0/100% 6px no-repeat}
+.darkroom .exit-foyer:hover{background:#e9e4da;color:#141414}
+
+/* 03 Kinosaal – Samtvorhang, Projektorlicht, Gold */
+.cinema{color:#f0e6d6;background:radial-gradient(ellipse at 50% 42%,#4a311f55,transparent 62%),#120e0c;border-top:1px solid #574337}
+.cinema::before,.cinema::after{content:"";position:absolute;top:0;bottom:0;width:clamp(14px,3vw,46px);z-index:-1;background:repeating-linear-gradient(90deg,#3a0f0d 0,#7a1f1a 7px,#2a0a09 15px);box-shadow:inset -10px 0 20px #0008}
+.cinema::before{left:0}.cinema::after{right:0;transform:scaleX(-1)}
+.beam{position:absolute;inset:0 18% auto;height:85%;z-index:-1;pointer-events:none;clip-path:polygon(48% 0,52% 0,100% 100%,0 100%);background:linear-gradient(#f6d2a314,#f6d2a306 70%,transparent)}
+.cinema .sec-head .mono{color:#cba16a}
+.cinema .room-sign b{color:#e7c48f}
+.cinema .sec-head h2{text-shadow:0 0 40px #cba16a33}
+.screen-frame{border-color:#8c6b49;box-shadow:0 30px 80px #000c,0 0 140px #f6d2a314}
+.reels button{border-color:#554231;background:#1e1713}
+.reels button[aria-selected=true]{border-color:#cba16a;background:#2a1f17}
+.reels .mono{color:#b8a58d}
+.cinema .exit-foyer:hover{background:#f0e6d6;color:#120e0c}
+
+/* 04 Hörraum – Tonstudio, Akustikschaum, On Air */
+.studio{color:#f0ebdd;background:#38483e;border-top:14px solid #222b24}
+.studio::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background:radial-gradient(#131d1890 1.2px,transparent 1.8px) 0 0/12px 12px;mask-image:linear-gradient(90deg,#000,transparent 75%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 75%)}
+.studio .sec-head .mono,.studio .sec-head p{color:#c9d1bf}
+.onair-sign{border:3px solid #243125;background:#18231d;color:#8d8670;padding:7px 12px;font-weight:700;letter-spacing:.2em;transition:.4s}
+.onair-sign.lit{background:#4a3a1d;color:#ffd27e;box-shadow:0 0 28px #f2b85944}
+.studio .podcast{margin-top:0;border-top:0;padding-top:0}
+.studio .podcast-copy h3{font-size:clamp(36px,4.4vw,60px)}
+.studio .podcast-copy p{color:#d5dccb}
+.studio .player{background:linear-gradient(120deg,#b7c1aa,#8e9c85);color:#263429;box-shadow:0 7px #67775e,0 12px #222b24,12px 25px 35px #0a120d88}
+.studio .player-top,.studio .player-time{color:#2f3e31}
+.studio .wave i{background:#263429}
+.studio #podSeek{accent-color:#a8452f}
+.studio .exit-foyer:hover{background:#f0ebdd;color:#38483e}
+
+/* Dossier – CV & Kontakt im Foyer */
+.dossier{background:#e8e2d6;border-top:1px solid #bdb7aa}
+.dossier .chips li{background:#f1ece2}
+
+/* Übergang durch die Tür */
+.threshold{position:fixed;z-index:90;pointer-events:none;transition:inset .7s var(--ease),border-radius .7s var(--ease),opacity .35s}
+.nav-exit{margin-left:auto;font-size:13px;font-weight:500;border:1px solid currentColor;border-radius:99px;padding:8px 15px}
+.nav-room{margin-left:18px;opacity:.7}
+body.in-room .nav nav,body.in-room .nav-cta{display:none}
+body.in-room .nav-room{margin-left:auto}
+body.in-room .nav-exit{margin-left:18px;order:3}
+.nav.room-light{background:color-mix(in srgb,#eee8db 85%,transparent);color:var(--ink)}
+.nav.room-dark{background:color-mix(in srgb,#120e0c 80%,transparent);color:#f0e6d6;border-color:#ffffff1a}
+.nav.room-green{background:color-mix(in srgb,#38483e 85%,transparent);color:#f0ebdd;border-color:#ffffff1a}
+
+@media (max-width:900px){
+  .cases{grid-template-columns:1fr 1fr}
+  .case:first-child{grid-column:auto}
+  .nav-room{display:none}
+}
+@media (max-width:560px){
+  .cases{grid-template-columns:1fr}
+  .case{grid-row:auto;grid-template-rows:auto}
+  .room-exit{align-items:center}
+  .door-next{width:118px}
+  .room-sign span:last-child{margin-left:0}
+}
+.room>.strip{max-width:none!important;margin-left:calc(var(--pad)*-1)!important;margin-right:calc(var(--pad)*-1)!important}
+
+/* ================= KLASSISCH & PROFESSIONELL ================= */
+:root{--paper:#efe9dc;--paper-2:#e6dece;--line:#cbc2b0}
+body{background:var(--paper)}
+.nav{background:color-mix(in srgb,var(--paper) 88%,transparent)}
+/* eckige, feine Schaltflächen statt Pillen */
+.nav-cta,.nav-exit,.exit-foyer,.send,.cd-bar button,.kinds span,.strip-ctrl button,.lb-nav button,.sn-start{border-radius:0}
+.nav-cta,.nav-exit,.exit-foyer{font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:11px 16px}
+.send{font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:17px 26px}
+.strip-ctrl button,.lb-nav button{width:44px;height:44px}
+.kinds span{padding:9px 14px}
+/* Serifen für Fliesstext-Einleitungen */
+.sec-head p,.podcast-copy p,.contact-head p,.cd-info p,.reels small{font:400 clamp(18px,1.5vw,21px)/1.45 var(--serif);font-weight:500}
+.reels small{font-size:15px}
+.sec-head h2{letter-spacing:-.02em}
+.hero-name{letter-spacing:-.025em}
+.cv-row strong{font:500 20px/1.2 var(--serif)}
+.chips{gap:0}
+.chips li{border:0;border-radius:0;background:none!important;padding:4px 0;font-size:15px}
+.chips li:not(:last-child)::after{content:"·";margin:0 10px;color:var(--muted)}
+/* Atelier: Arbeiten bündig, Dokumente vollständig auf Papier */
+.cases{gap:clamp(18px,2.4vw,32px)}
+.case{background:#f7f3ea;padding:clamp(14px,1.6vw,20px);box-shadow:0 1px 0 #d4c9b4,0 12px 28px #5b493514}
+.case:hover{transform:translateY(-3px);box-shadow:0 1px 0 #d4c9b4,0 18px 36px #5b49351f}
+.case-img,.case:first-child .case-img{aspect-ratio:1/1.12;background:#e7e0d1;padding:clamp(14px,2vw,26px)}
+.case-img img,.case:first-child .case-img img{object-fit:contain;object-position:50% 50%;box-shadow:0 6px 16px #3a2f2230}
+.case:hover .case-img img,.case:focus-visible .case-img img{transform:scale(1.025)}
+.case-img::after{content:"Ansehen";border-radius:0;background:none;color:var(--ink);border-bottom:1px solid;padding:0 0 3px;right:clamp(14px,2vw,26px);bottom:8px;font-size:10px}
+.case-title{font-size:clamp(24px,2.2vw,32px);line-height:1.05}
+.case-tags{font:500 15px/1.3 var(--serif);color:var(--muted)}
+/* Nächste Tür */
+.door-next .door-leaf{overflow:hidden}
+.door-next .door-leaf strong{font-size:clamp(15px,1.35vw,19px);line-height:1.05}
+.door-next{border-width:5px}
+.room{overflow-x:clip}
+.player.playing .wave i{animation-duration:1.6s}
+@media (max-width:560px){.case-img,.case:first-child .case-img{aspect-ratio:1/1}}
+@media (max-width:900px){body.in-room .nav-exit{margin-left:auto}}

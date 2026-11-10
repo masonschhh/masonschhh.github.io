@@ -425,3 +425,29 @@ body{background:var(--paper)}
 .player.playing .wave i{animation-duration:1.6s}
 @media (max-width:560px){.case-img,.case:first-child .case-img{aspect-ratio:1/1}}
 @media (max-width:900px){body.in-room .nav-exit{margin-left:auto}}
+
+/* ================= RAUM-DETAILS ================= */
+/* Messingschild an jeder Tür */
+.room .room-sign b{font:500 13px/1 var(--serif);letter-spacing:.12em;color:#2b2216;border:0;padding:9px 14px 8px;
+  background:linear-gradient(135deg,#e8d6a6,#b08f52 45%,#e3cd95 70%,#a3824a);box-shadow:inset 0 0 0 1px #6d542888,inset 0 1px 0 #fff6,0 2px 5px #0005}
+/* Dunkelkammer: Abzüge hängen zum Trocknen an der Leine */
+.darkroom .strip{padding-top:34px;padding-bottom:36px;background:linear-gradient(#9a8e7e,#9a8e7e) 0 15px/100% 1px no-repeat;background-attachment:local}
+.darkroom .shot{overflow:visible;transform-origin:50% 0;transition:transform .6s var(--ease)}
+.darkroom .shot:nth-child(odd){transform:rotate(-.7deg)}
+.darkroom .shot:nth-child(even){transform:rotate(.6deg) translateY(6px)}
+.darkroom .shot:hover{transform:rotate(0) translateY(-2px)}
+.darkroom .shot::before{content:"";position:absolute;top:-24px;left:50%;width:12px;height:30px;transform:translateX(-50%);z-index:2;border-radius:2px;
+  background:linear-gradient(90deg,#b49c70,#d8c39a 45%,#a88f62);box-shadow:0 2px 3px #0008}
+/* Kinosaal: Glühbirnen-Leiste und Eintrittskarten */
+.cinema .sec-head h2{padding-top:26px;background:radial-gradient(circle,#ffdf9a 2.2px,#ffb84d55 3.5px,transparent 4.5px) 0 0/22px 12px repeat-x}
+.cinema .reels button{position:relative;padding:20px 26px;background:#2a1f17;border:0;border-left:1px dashed #6b553b;
+  -webkit-mask:radial-gradient(circle 10px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 10px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat}
+.cinema .reels button[aria-selected=true]{background:#e9d9b8;color:#2a1f17}
+.cinema .reels button[aria-selected=true] .mono,.cinema .reels button[aria-selected=true] small{color:#5d4a33}
+.cinema .reels button::after{content:"Eintritt";position:absolute;right:22px;top:18px;font:500 9px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.55}
+/* Hörraum: Akustikpaneele */
+.studio::after{content:"";position:absolute;top:0;right:0;bottom:0;width:42%;z-index:-1;pointer-events:none;opacity:.7;
+  background:conic-gradient(from 45deg,#2f3d34 25%,#35463c 0 50%,#2b3830 0 75%,#324238 0) 0 0/34px 34px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 70%);mask-image:linear-gradient(90deg,transparent,#000 70%)}
+@media (max-width:900px){.studio::after{width:100%;opacity:.35}}

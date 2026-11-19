@@ -638,6 +638,13 @@ function initReveals() {
   $$("[data-stagger]").forEach(el => {
     G.fromTo(el.children, { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "expo.out", stagger: .07, scrollTrigger: { trigger: el, start: "top 90%", once: true } });
   });
+  $$("[data-photo]").forEach(el => {
+    const frame = $(".ap-frame", el), img = $("img", el);
+    const st = () => ({ trigger: el, start: "top 85%", once: true });
+    G.fromTo(frame, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "expo.inOut", scrollTrigger: st() });
+    G.fromTo(img, { scale: 1.35 }, { scale: 1, duration: 1.8, ease: "expo.out", scrollTrigger: st() });
+    G.fromTo($("figcaption", el), { opacity: 0, y: 12 }, { opacity: .55, y: 0, duration: 1, delay: .6, ease: "expo.out", scrollTrigger: st() });
+  });
   $$(".sec-label").forEach(el => {
     G.fromTo(el, { opacity: 0, x: -20 }, { opacity: .6, x: 0, duration: 1, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } });
   });

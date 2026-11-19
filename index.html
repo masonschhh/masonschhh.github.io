@@ -7,266 +7,406 @@
 <meta name="description" content="Mason Schindler, Mediamatiker EFZ in Ausbildung nahe Luzern. Design, Fotografie, Film und Podcast.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://masonschindler.ch/">
+<meta name="theme-color" content="#eeece7">
 <meta property="og:url" content="https://masonschindler.ch/">
 <meta property="og:locale" content="de_CH">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mason Schindler","url":"https://masonschindler.ch","jobTitle":"Mediamatiker EFZ in Ausbildung","address":{"@type":"PostalAddress","addressRegion":"Luzern","addressCountry":"CH"},"sameAs":["https://www.linkedin.com/in/mason-schindler-898aa8208/"]}</script>
-<meta name="theme-color" content="#f1eee7">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Mason Schindler — Portfolio & CV">
 <meta property="og:description" content="Design, Fotografie, Film und Podcast. Mediamatiker EFZ in Ausbildung nahe Luzern.">
 <meta property="og:image" content="https://masonschindler.ch/og-image.jpg">
-<meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mason Schindler","url":"https://masonschindler.ch","jobTitle":"Mediamatiker EFZ in Ausbildung","address":{"@type":"PostalAddress","addressRegion":"Luzern","addressCountry":"CH"},"sameAs":["https://www.linkedin.com/in/mason-schindler-898aa8208/"]}</script>
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="fonts/bodoni-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
-<body>
-<a class="skip" href="#raeume">Zum Inhalt springen</a>
+<body data-theme="light">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M3.5 12h16M13.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M20.5 12h-16M10.5 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3.5v16M6 13.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20.5v-16M6 10.5l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5.5 5.5l13 13M18.5 5.5l-13 13" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6L19 12z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z" fill="currentColor"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0z" fill="currentColor"/></symbol>
+</svg>
+
+<a class="skip" href="#ueber">Zum Inhalt springen</a>
+
+<!-- Preloader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-inner">
+    <div class="ld-top mono"><span>Mason Schindler</span><span>Portfolio © 2026</span></div>
+    <div class="ld-bottom">
+      <p class="ld-word mono">Design<br>Fotografie<br>Film<br>Podcast</p>
+      <div class="ld-num"><span id="ldNum">0</span><small>%</small></div>
+    </div>
+  </div>
+  <div class="ld-bar"><i></i></div>
+</div>
+
+<!-- Cursor -->
+<div class="cursor" aria-hidden="true"><div class="cur-ring"><span class="cur-label"></span></div><div class="cur-dot"></div></div>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#start" aria-label="Nach oben">ms</a>
-  <nav aria-label="Hauptnavigation">
-    <a href="#raeume" data-foyer>Räume</a>
-    <a href="#cv" data-foyer>CV</a>
+  <a class="brand" href="#start" aria-label="Mason Schindler – nach oben"><i class="brand-dot"></i><span>Mason Schindler</span></a>
+  <p class="nav-meta mono"><span>Mediamatiker EFZ</span><span>Luzern <time data-clock>--:--</time></span></p>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a class="roll" href="#arbeiten"><span data-t="Arbeiten">Arbeiten</span></a>
+    <a class="roll" href="#fotos"><span data-t="Fotos">Fotos</span></a>
+    <a class="roll" href="#film"><span data-t="Film">Film</span></a>
+    <a class="roll" href="#podcast"><span data-t="Podcast">Podcast</span></a>
+    <a class="roll" href="#lebenslauf"><span data-t="CV">CV</span></a>
   </nav>
-  <button type="button" class="nav-exit" id="navExit" hidden><span aria-hidden="true">←</span> Zurück ins Foyer</button>
-  <span class="nav-room mono" id="navRoom"></span>
-  <a class="nav-cta" href="#kontakt" data-foyer>Schreib mir <span aria-hidden="true">↗</span></a>
-  <i class="nav-progress" aria-hidden="true"></i>
+  <a class="nav-cta magnetic" href="#kontakt"><span class="roll"><span data-t="Kontakt">Kontakt</span></span></a>
+  <button type="button" class="nav-menu" id="menuOpen" aria-haspopup="dialog" aria-controls="menu"><span>Menü</span><i></i></button>
 </header>
 
-<main>
-<div id="foyer">
-<!-- 00 START -->
-<section class="hero" id="start">
-  <div class="hero-top mono"><span>Portfolio & CV</span><span>Nahe Luzern, Schweiz</span></div>
-  <h1 class="hero-name" aria-label="Mason Schindler">
-    <span class="line"><span>MASON</span></span>
-    <span class="line"><span>SCHINDLE<button type="button" class="snake-r" id="snakeOpen" aria-label="Easter Egg: Snake öffnen" title="Psst …">R</button></span></span>
-  </h1>
-  <div class="hero-foot">
-    <p class="hero-claim">Design, Fotografie,<br><em>Film und Digital.</em></p>
-    <ul class="hero-facts mono" aria-label="Kurzprofil">
-      <li><span>Ausbildung</span>Mediamatiker EFZ</li>
-      <li><span>Alter</span>18</li>
-      <li><span>Ort</span>Nähe Luzern</li>
-    </ul>
-  </div>
+<main id="main">
 
-  <!-- Die Türen: ein Raum pro Disziplin. Hover/Fokus öffnet, Klick führt hinein. -->
-  <p class="rooms-label mono"><span>Das Foyer</span><span>Wähle eine Tür</span></p>
-  <div class="rooms" id="raeume" aria-label="Räume – nur durch die Türen erreichbar">
-    <a class="door" href="#arbeiten" style="--tone:#d9cbb0">
-      <span class="door-inside"><img src="/images-shift-page-7.webp" alt="" loading="lazy"></span>
-      <span class="door-leaf"><span class="mono">Raum 01</span><strong>Atelier</strong><i class="knob"></i></span>
-      <span class="door-label"><b>Design</b><small>Marke · Magazin · Plakat</small></span>
-    </a>
-    <a class="door" href="#fotos" style="--tone:#2a2622">
-      <span class="door-inside"><img src="/images-photo-eisvogel.webp" alt="" loading="lazy"></span>
-      <span class="door-leaf dark"><span class="mono">Raum 02</span><strong>Dunkel&shy;kammer</strong><i class="knob"></i><i class="bulb"></i></span>
-      <span class="door-label"><b>Fotografie</b><small>Natur · Montage · Oldtimer</small></span>
-    </a>
-    <a class="door" href="#kino" style="--tone:#5a1f1a">
-      <span class="door-inside"><img src="/images-projects-animation.jpg" alt="" loading="lazy"></span>
-      <span class="door-leaf red"><span class="mono">Raum 03</span><strong>Kinosaal</strong><i class="knob"></i></span>
-      <span class="door-label"><b>Film</b><small>Video · Animation</small></span>
-    </a>
-    <a class="door" href="#podcast" style="--tone:#6f8467">
-      <span class="door-inside"><img src="/images-projects-audio-art.svg" alt="" loading="lazy"></span>
-      <span class="door-leaf green"><span class="mono">Raum 04</span><strong>Hörraum</strong><i class="knob"></i><i class="onair">ON AIR</i></span>
-      <span class="door-label"><b>Podcast</b><small>SwissSkills</small></span>
-    </a>
+<!-- HERO -->
+<section class="hero" id="start" data-theme="light">
+  <div class="hero-trail" id="trail" aria-hidden="true"></div>
+  <div class="hero-top">
+    <p class="hero-intro">Mediamatiker EFZ in Ausbildung. Design, Fotografie, Film &amp; Podcast – aus der Nähe von Luzern.</p>
+    <p class="hero-hint mono" aria-hidden="true"><span class="hint-fine">( Beweg die Maus )</span><span class="hint-touch">( Scroll los )</span></p>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-meta">
+      <p class="rotator"><span class="sr-only">Ich gestalte Marken, Magazine, Plakate, Fotos, Filme und Podcasts.</span><span aria-hidden="true">Ich gestalte</span> <span class="rot" aria-hidden="true"><em>Marken.</em><em>Magazine.</em><em>Plakate.</em><em>Fotos.</em><em>Filme.</em><em>Podcasts.</em></span></p>
+      <a class="badge magnetic" href="#ueber" aria-label="Weiter nach unten">
+        <svg class="badge-ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circ" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#circ" textLength="292" lengthAdjust="spacing">Scroll · Entdecken · Scroll · Entdecken · </textPath></text></svg>
+        <svg class="i badge-arrow" aria-hidden="true"><use href="#i-down"/></svg>
+      </a>
+    </div>
+    <h1 class="hero-name" aria-label="Mason Schindler">
+      <span class="hn hn-1"><span class="hn-in" aria-hidden="true">Mason</span></span>
+      <span class="hn hn-2"><span class="hn-in"><span aria-hidden="true">Schindle</span><button type="button" class="snake-r" id="snakeOpen" aria-label="Easter Egg: Snake öffnen" title="Psst …">R</button></span></span>
+    </h1>
   </div>
 </section>
-<div class="dossier">
-<!-- 05 CV -->
-<section class="section cv" id="cv">
-  <div class="sec-head"><span class="mono room-sign"><b>Dossier</b><span>Lebenslauf</span><span>Stand 2026</span></span><h2>Über <em>mich.</em></h2></div>
+
+<!-- LAUFBÄNDER -->
+<div class="bands" aria-hidden="true">
+  <div class="band band-a"><div class="band-track">
+    <span>Design</span><svg class="star"><use href="#i-star"/></svg><em>Fotografie</em><svg class="star"><use href="#i-star"/></svg><span>Film</span><svg class="star"><use href="#i-star"/></svg><em>Podcast</em><svg class="star"><use href="#i-star"/></svg><span>Design</span><svg class="star"><use href="#i-star"/></svg><em>Fotografie</em><svg class="star"><use href="#i-star"/></svg><span>Film</span><svg class="star"><use href="#i-star"/></svg><em>Podcast</em><svg class="star"><use href="#i-star"/></svg>
+  </div></div>
+  <div class="band band-b"><div class="band-track">
+    <span>Mediamatiker EFZ</span><svg class="star"><use href="#i-star"/></svg><em>Nähe Luzern</em><svg class="star"><use href="#i-star"/></svg><span>Portfolio 2026</span><svg class="star"><use href="#i-star"/></svg><span>Mediamatiker EFZ</span><svg class="star"><use href="#i-star"/></svg><em>Nähe Luzern</em><svg class="star"><use href="#i-star"/></svg><span>Portfolio 2026</span><svg class="star"><use href="#i-star"/></svg>
+  </div></div>
+</div>
+
+<!-- ÜBER MICH -->
+<section class="about wrap" id="ueber" data-theme="light">
+  <p class="sec-label mono"><span>(01)</span><span>Über mich</span></p>
+  <p class="about-text" data-scrub>Ich bin Mason, 18, und mache eine Ausbildung zum <em>Mediamatiker EFZ.</em> Mich interessiert, wo Bereiche zusammenkommen: wenn ein Foto Teil eines Layouts wird oder eine Website auf ihre Besucher <em>reagiert.</em></p>
+  <dl class="facts" data-stagger>
+    <div><dt class="mono">Ausbildung</dt><dd>Mediamatiker EFZ</dd></div>
+    <div><dt class="mono">Alter</dt><dd>18</dd></div>
+    <div><dt class="mono">Ort</dt><dd>Nähe Luzern, CH</dd></div>
+    <div><dt class="mono">Kamera</dt><dd>Canon EOS R7<br>Sony α7 III</dd></div>
+  </dl>
+</section>
+
+<!-- ARBEITEN -->
+<section class="work" id="arbeiten" data-theme="light">
+  <header class="sec-head wrap">
+    <p class="sec-label mono"><span>(02)</span><span>Design</span></p>
+    <h2 class="big-title" data-chars>Arbeiten</h2>
+    <p class="sec-sub" data-reveal>Drei Designprojekte aus der Ausbildung: eine Marke, ein Magazin, ein Plakat. Klick dich rein.</p>
+  </header>
+
+  <div class="cards wrap">
+    <article class="card" style="--i:0;--c-bg:#1e3a2a;--c-fg:#f1eee4" data-case="shift">
+      <div class="card-inner">
+        <div class="card-info">
+          <div class="card-top mono"><span>001</span><span>2026</span></div>
+          <div>
+            <h3 class="card-title">SHIFT <em>– Plantinos</em></h3>
+            <p class="card-tags mono">Markenentwicklung · Verpackung · Social Media</p>
+            <p class="card-desc">Für die Schulaufgabe SHIFT habe ich eine Snack-Marke entwickelt: Plantinos, Kochbananen-Chips mit Chili und Limette.</p>
+          </div>
+          <button type="button" class="btn magnetic" data-open-case="shift"><span>Projekt ansehen</span><svg class="i"><use href="#i-ne"/></svg></button>
+        </div>
+        <button type="button" class="card-media cm-shift" data-open-case="shift" data-cursor="Ansehen" aria-label="SHIFT – Plantinos ansehen">
+          <span class="cm cm-main"><img src="images-shift-page-1.webp" alt="Titelseite des SHIFT-Gestaltungskonzepts für Plantinos" width="2200" height="1556" loading="lazy" decoding="async"></span>
+          <span class="cm cm-sub"><img src="images-shift-page-7.webp" alt="" width="2200" height="778" loading="lazy" decoding="async"></span>
+        </button>
+      </div>
+      <i class="card-shade" aria-hidden="true"></i>
+    </article>
+
+    <article class="card" style="--i:1;--c-bg:#bcd5ee;--c-fg:#0e0e0e" data-case="ew-hoefe">
+      <div class="card-inner">
+        <div class="card-info">
+          <div class="card-top mono"><span>002</span><span>2025</span></div>
+          <div>
+            <h3 class="card-title">Connected <em>– EW Höfe</em></h3>
+            <p class="card-tags mono">Magazin · Editorial Design</p>
+            <p class="card-desc">Ein Magazin für EW Höfe. Das Layout verbindet Energie-Themen, Bilder und Zahlen zu einer zusammenhängenden Publikation.</p>
+          </div>
+          <button type="button" class="btn magnetic" data-open-case="ew-hoefe"><span>Projekt ansehen</span><svg class="i"><use href="#i-ne"/></svg></button>
+        </div>
+        <button type="button" class="card-media cm-ew" data-open-case="ew-hoefe" data-cursor="Ansehen" aria-label="Connected – EW Höfe ansehen">
+          <span class="cm cm-main"><img src="images-ew-hoefe-page-3.webp" alt="Doppelseite aus dem Magazin Connected" width="2200" height="1556" loading="lazy" decoding="async"></span>
+          <span class="cm cm-sub"><img src="images-ew-hoefe-page-1.webp" alt="" width="1556" height="2200" loading="lazy" decoding="async"></span>
+        </button>
+      </div>
+      <i class="card-shade" aria-hidden="true"></i>
+    </article>
+
+    <article class="card" style="--i:2;--c-bg:#16243f;--c-fg:#f1eee4" data-case="luzern">
+      <div class="card-inner">
+        <div class="card-info">
+          <div class="card-top mono"><span>003</span><span>2025–26</span></div>
+          <div>
+            <h3 class="card-title">Luzern <em>entdecken</em></h3>
+            <p class="card-tags mono">Plakat · Infografik · mit Mathis</p>
+            <p class="card-desc">Zwei Schulaufgaben zu Luzern Tourismus: ein F200-Plakat für Kurzferien und eine Infografik über Hotelgäste von 2018 bis 2024.</p>
+          </div>
+          <button type="button" class="btn magnetic" data-open-case="luzern"><span>Projekt ansehen</span><svg class="i"><use href="#i-ne"/></svg></button>
+        </div>
+        <button type="button" class="card-media cm-lu" data-open-case="luzern" data-cursor="Ansehen" aria-label="Luzern entdecken ansehen">
+          <span class="cm cm-main"><img src="images-luzern-infografik-page-1.webp" alt="Infografik über Hotelgäste in Luzern 2018 bis 2024" width="2200" height="1556" loading="lazy" decoding="async"></span>
+          <span class="cm cm-sub"><img src="images-luzern-plakat-page-1.webp" alt="" width="1508" height="2200" loading="lazy" decoding="async"></span>
+        </button>
+      </div>
+      <i class="card-shade" aria-hidden="true"></i>
+    </article>
+  </div>
+</section>
+
+<!-- FOTOGRAFIE -->
+<section class="photos" id="fotos" data-theme="dark">
+  <div class="ph-pin">
+    <header class="ph-head wrap">
+      <div>
+        <p class="sec-label mono"><span>(03)</span><span>Fotografie</span></p>
+        <h2 class="big-title" data-chars>Foto<em>grafie</em></h2>
+      </div>
+      <p class="ph-text" data-reveal>Natur, Bildmontage und eine Serie über Oldtimer. Antippen für Vollbild und Aufnahmedaten.</p>
+    </header>
+    <div class="ph-track" id="phTrack" tabindex="0" aria-label="Fotos, seitlich scrollbar">
+      <button type="button" class="ph" style="--r:1333/2000;--h:1" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-eisvogel.webp" alt="Eisvogel auf einem Ast vor grünem Hintergrund" width="1333" height="2000" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">01</span><b>Eisvogel</b><span class="mono ph-sub">Natur · 2026</span></span>
+        <span class="ph-exif mono">1/400 s · f/6,3 · ISO 800 · 300 mm · Sony α7 III</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.74;--dy:-1" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-multiplicity.webp" alt="Fotomontage mit vier Versionen von Mason auf einer geschwungenen Treppe" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">02</span><b>Multiplicity</b><span class="mono ph-sub">Fotomontage · 2024</span></span>
+        <span class="ph-exif mono">1/125 s · f/7,1 · ISO 1000 · 18 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.88;--dy:.6" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-01.webp" alt="Mintgrüner Borgward Isabella vor einer Garage" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">03</span><b>Borgward Isabella</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/500 s · f/14 · ISO 320 · 18 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.66;--dy:-1.2" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-02.webp" alt="Lenkrad und Armaturen eines klassischen Mercedes mit roten Sitzen" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">04</span><b>Am Steuer</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/20 s · f/3,5 · ISO 800 · 50 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1343;--h:.92;--dy:.3" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-03.webp" alt="Detailaufnahme der Front eines mintgrünen Borgward Isabella" width="2000" height="1343" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">05</span><b>Chrom &amp; Kurven</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/400 s · f/18 · ISO 400 · 18 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.7;--dy:-.8" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-04.webp" alt="Heck eines Borgward Isabella Coupés" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">06</span><b>Isabella von hinten</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/400 s · f/11 · ISO 400 · 18 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.96;--dy:.5" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-05.webp" alt="Drei klassische Mercedes in einer Reihe im Sonnenlicht" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">07</span><b>Drei Klassiker</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/400 s · f/10 · ISO 500 · 18 mm · Canon EOS R7</span>
+      </button>
+      <button type="button" class="ph" style="--r:2000/1333;--h:.78;--dy:-.6" data-cursor="Ansehen">
+        <span class="ph-frame"><img src="images-photo-oldtimer-06.webp" alt="Roter Innenraum eines klassischen Mercedes 220 SE" width="2000" height="1333" loading="lazy" decoding="async"></span>
+        <span class="ph-cap"><span class="mono ph-n">08</span><b>Rote Sitze</b><span class="mono ph-sub">Chrom &amp; Charakter · 2025</span></span>
+        <span class="ph-exif mono">1/400 s · f/7,1 · ISO 1000 · 18 mm · Canon EOS R7</span>
+      </button>
+    </div>
+    <div class="ph-foot wrap mono">
+      <span id="phCount">01 / 08</span>
+      <i class="ph-bar" aria-hidden="true"><b id="phBar"></b></i>
+      <span class="ph-ctrl"><button type="button" data-ph="-1" aria-label="Vorheriges Foto"><svg class="i"><use href="#i-left"/></svg></button><button type="button" data-ph="1" aria-label="Nächstes Foto"><svg class="i"><use href="#i-right"/></svg></button></span>
+    </div>
+  </div>
+</section>
+
+<!-- FILM -->
+<section class="film" id="film" data-theme="dark">
+  <header class="sec-head wrap">
+    <p class="sec-label mono"><span>(04)</span><span>Film</span></p>
+    <h2 class="big-title" data-chars>Bilder in <em>Bewegung.</em></h2>
+  </header>
+  <div class="screen-wrap wrap">
+    <div class="screen" id="screen">
+      <video id="video" playsinline preload="none" poster="images-projects-uek-video.jpg" aria-label="ÜK – Modul 267"><source src="video-uek-modul-267.mp4" type="video/mp4"></video>
+      <button type="button" class="screen-play" id="screenPlay" data-cursor="Play" aria-label="Film abspielen: ÜK – Modul 267">
+        <span class="sp-btn"><svg class="i"><use href="#i-play"/></svg></span>
+        <span class="sp-title"><span class="mono" id="spKicker">Film 01 · 3:13</span><strong id="spTitle">ÜK – Modul 267</strong></span>
+      </button>
+    </div>
+  </div>
+  <div class="reels wrap" role="tablist" aria-label="Filme auswählen">
+    <button type="button" class="reel" role="tab" aria-selected="true" data-film="0">
+      <span class="mono">01</span><span class="reel-body"><strong>ÜK – Modul 267</strong><small>Videoprojekt aus dem überbetrieblichen Kurs.</small></span><span class="mono">3:13</span>
+    </button>
+    <button type="button" class="reel" role="tab" aria-selected="false" data-film="1">
+      <span class="mono">02</span><span class="reel-body"><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm: Konzept, Illustration, Animation, Voice-over und Postproduktion. Schulprojekt Modul 266.</small></span><span class="mono">2:53</span>
+    </button>
+  </div>
+</section>
+
+<!-- PODCAST -->
+<section class="pod" id="podcast" data-theme="accent">
+  <div class="pod-grid wrap">
+    <div class="pod-copy">
+      <p class="sec-label mono"><span>(05)</span><span>Podcast</span></p>
+      <h2 class="big-title" data-chars>Hör <em>rein.</em></h2>
+      <p class="pod-text" data-reveal>SwissSkills – mein eigener Schul-Podcast. Ich führe durch die Folge, Chiara ist zu Gast.</p>
+    </div>
+    <div class="player" id="player" data-reveal>
+      <div class="pl-top mono"><span class="pl-live"><i></i><span id="podState">Bereit</span></span><span>Folge 001</span></div>
+      <h3 class="pl-title">SwissSkills<br><em>mit Chiara.</em></h3>
+      <canvas class="viz" id="viz" aria-hidden="true"></canvas>
+      <div class="pl-ctrl">
+        <button type="button" class="pl-play magnetic" id="podPlay" aria-label="Podcast abspielen"><svg class="i ic-play"><use href="#i-play"/></svg><svg class="i ic-pause"><use href="#i-pause"/></svg></button>
+        <div class="pl-seek">
+          <input type="range" id="podSeek" min="0" max="1549" step="1" value="0" aria-label="Wiedergabeposition">
+          <div class="pl-time mono"><span id="podTime">0:00</span><span id="podDur">25:49</span></div>
+        </div>
+      </div>
+      <audio id="pod" preload="none" src="audio-swissskills-mason-chiara.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<!-- LEBENSLAUF -->
+<section class="cv wrap" id="lebenslauf" data-theme="light">
+  <header class="cv-head">
+    <p class="sec-label mono"><span>(06)</span><span>Lebenslauf</span></p>
+    <h2 class="big-title" data-chars>Werde<em>gang.</em></h2>
+  </header>
   <div class="cv-grid">
-    <figure class="cv-photo"><img src="/images-portraits-portrait.webp" alt="Porträt von Mason Schindler" loading="lazy"><figcaption class="mono">Mason Schindler · 18 · Nähe Luzern</figcaption></figure>
-    <div class="cv-body">
-      <p class="cv-lead">Ich bin 18, wohne in der Nähe von Luzern und mache eine Ausbildung zum <em>Mediamatiker EFZ</em>. Mich interessiert, wo Bereiche zusammenkommen: wenn ein Foto Teil eines Layouts wird oder eine Website auf ihre Besucher reagiert.</p>
-
-      <div class="cv-block">
-        <h3 class="mono">Ausbildung</h3>
-        <div class="cv-row now"><span class="mono">Heute</span><div><strong>Mediamatiker EFZ</strong><small>In Ausbildung</small></div></div>
+    <div class="cv-main">
+      <h3 class="cv-h mono">Ausbildung</h3>
+      <ul class="rows" data-stagger>
+        <li><div class="row is-now"><span class="mono">Heute</span><strong>Mediamatiker EFZ</strong><small>In Ausbildung</small></div></li>
+      </ul>
+      <h3 class="cv-h mono">Projekte</h3>
+      <ul class="rows" data-stagger>
+        <li><a class="row" href="#arbeiten" data-open-case="shift"><span class="mono">2026</span><strong>SHIFT – Plantinos</strong><small>Marke, Verpackung, Social Media · Modul 275</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#film" data-film-link="1"><span class="mono">2026</span><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm · Modul 266</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#film" data-film-link="0"><span class="mono">2026</span><strong>ÜK – Modul 267</strong><small>Videoprojekt</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#arbeiten" data-open-case="luzern"><span class="mono">2025–26</span><strong>Luzern entdecken</strong><small>Plakat &amp; Infografik, mit Mathis · Modul 274</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#arbeiten" data-open-case="ew-hoefe"><span class="mono">2025</span><strong>Connected – EW Höfe</strong><small>Magazin · Modul 273</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#podcast"><span class="mono">2025</span><strong>SwissSkills</strong><small>Eigener Podcast, Chiara als Gast</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+        <li><a class="row" href="#fotos"><span class="mono">2024–26</span><strong>Fotografie</strong><small>Eisvogel, Multiplicity, Chrom &amp; Charakter</small><svg class="i"><use href="#i-ne"/></svg></a></li>
+      </ul>
+    </div>
+    <aside class="cv-side">
+      <div class="cv-box" data-reveal>
+        <h3 class="cv-h mono">Kann ich</h3>
+        <ul class="chips"><li>Markenentwicklung</li><li>Editorial Design</li><li>Plakat &amp; Infografik</li><li>Fotografie</li><li>Bildbearbeitung</li><li>Video</li><li>Animation</li><li>Voice-over</li><li>Podcast</li></ul>
       </div>
-
-      <div class="cv-block">
-        <h3 class="mono">Projekte</h3>
-        <div class="cv-row"><span class="mono">2026</span><div><strong>SHIFT – Plantinos</strong><small>Marke, Verpackung, Social Media · Modul 275</small></div></div>
-        <div class="cv-row"><span class="mono">2026</span><div><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm · Modul 266</small></div></div>
-        <div class="cv-row"><span class="mono">2026</span><div><strong>ÜK – Modul 267</strong><small>Videoprojekt</small></div></div>
-        <div class="cv-row"><span class="mono">2025–26</span><div><strong>Luzern entdecken</strong><small>Plakat & Infografik, mit Mathis · Modul 274</small></div></div>
-        <div class="cv-row"><span class="mono">2025</span><div><strong>Connected – EW Höfe</strong><small>Magazin · Modul 273</small></div></div>
-        <div class="cv-row"><span class="mono">2025</span><div><strong>SwissSkills</strong><small>Eigener Podcast, Chiara als Gast</small></div></div>
-        <div class="cv-row"><span class="mono">2024–26</span><div><strong>Fotografie</strong><small>Eisvogel, Multiplicity, Chrom & Charakter</small></div></div>
+      <div class="cv-box cv-two" data-reveal>
+        <div><h3 class="cv-h mono">Kamera</h3><ul class="plain"><li>Canon EOS R7</li><li>Sony α7 III</li></ul></div>
+        <div><h3 class="cv-h mono">Ausserdem</h3><ul class="plain"><li>Fussball</li><li>Fotografie</li></ul></div>
       </div>
+      <a class="btn btn-line magnetic" href="https://www.linkedin.com/in/mason-schindler-898aa8208/" target="_blank" rel="noopener noreferrer" data-reveal><span>LinkedIn</span><svg class="i"><use href="#i-ne"/></svg></a>
+    </aside>
+  </div>
+</section>
 
-      <div class="cv-cols">
-        <div class="cv-block">
-          <h3 class="mono">Kann ich</h3>
-          <ul class="chips"><li>Markenentwicklung</li><li>Editorial Design</li><li>Plakat & Infografik</li><li>Fotografie</li><li>Bildbearbeitung</li><li>Video</li><li>Animation</li><li>Voice-over</li><li>Podcast</li></ul>
-        </div>
-        <div class="cv-block">
-          <h3 class="mono">Kamera</h3>
-          <ul class="plain"><li>Canon EOS R7</li><li>Sony α7 III</li></ul>
-          <h3 class="mono">Ausserdem</h3>
-          <ul class="plain"><li>Fussball</li><li>Fotografie</li></ul>
-        </div>
+<!-- KONTAKT -->
+<section class="contact" id="kontakt" data-theme="dark">
+  <div class="wrap">
+    <p class="sec-label mono"><span>(07)</span><span>Kontakt</span></p>
+    <h2 class="huge-title" data-chars>Schreib <em>mir.</em></h2>
+    <div class="contact-grid">
+      <div class="contact-copy" data-reveal>
+        <p>Für ein Projekt, ein Shooting oder eine Frage.</p>
+        <a class="mail" href="mailto:mace.schindler@icloud.com"><span>mace.schindler@icloud.com</span><svg class="i"><use href="#i-ne"/></svg></a>
       </div>
-      <a class="link-btn" href="https://www.linkedin.com/in/mason-schindler-898aa8208/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      <div class="contact-side" data-reveal>
+        <h3 class="cv-h mono">Worum geht’s?</h3>
+        <ul class="chips"><li>Shooting</li><li>Design</li><li>Film &amp; Video</li><li>Lehre / Job</li><li>Etwas anderes</li></ul>
+        <a class="btn btn-light magnetic" href="https://www.linkedin.com/in/mason-schindler-898aa8208/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><svg class="i"><use href="#i-ne"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- 05 KONTAKT -->
-<section class="section contact" id="kontakt">
-  <div class="contact-head"><span class="mono">Kontakt</span><h2>Schreib <em>mir.</em></h2><p>Für ein Projekt, ein Shooting oder eine Frage.</p><a class="mail" href="mailto:mace.schindler@icloud.com">mace.schindler@icloud.com ↗</a></div>
-  <form class="form" id="form" novalidate>
-    <div class="hp" aria-hidden="true"><label>Bitte leer lassen<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
-    <label>Name *<input name="name" autocomplete="name" required maxlength="100" placeholder="Wie heisst du?"></label>
-    <label>E-Mail *<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="du@beispiel.ch"></label>
-    <fieldset class="kinds"><legend>Worum geht’s? *</legend>
-      <label><input type="radio" name="kind" value="Shooting" required><span>Shooting</span></label>
-      <label><input type="radio" name="kind" value="Design"><span>Design</span></label>
-      <label><input type="radio" name="kind" value="Film & Video"><span>Film & Video</span></label>
-      <label><input type="radio" name="kind" value="Lehre / Job"><span>Lehre / Job</span></label>
-      <label><input type="radio" name="kind" value="Etwas anderes"><span>Etwas anderes</span></label>
-    </fieldset>
-    <label class="full">Nachricht *<textarea name="message" rows="5" required maxlength="3000" placeholder="Was möchtest du umsetzen?"></textarea></label>
-    <p class="note full">* Pflichtfelder. Deine Angaben werden über <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit</a> an Mason übermittelt.</p>
-    <button class="send full" type="submit">Anfrage senden <span aria-hidden="true">↗</span></button>
-    <p class="status full" id="formStatus" role="status"></p>
-  </form>
-</section>
-</div>
-</div><!-- /foyer -->
-
-<div id="roomsView">
-
-<!-- 01 ARBEITEN -->
-<section class="section room work" id="arbeiten" hidden>
-  <div class="sec-head"><span class="mono room-sign"><b>Raum 01</b><span>Das Atelier</span><span>Design</span></span><h2>Ausgewählte <em>Arbeiten.</em></h2><p>Drei Designprojekte aus der Ausbildung. Antippen öffnet die ganze Arbeit.</p></div>
-  <div class="cases">
-    <button class="case" data-case="shift">
-      <span class="case-img"><img src="/images-shift-page-1.webp" alt="Titelseite des SHIFT-Gestaltungskonzepts für Plantinos" loading="lazy"></span>
-      <span class="case-meta mono"><span>001</span><span>2026</span></span>
-      <span class="case-title">SHIFT <em>– Plantinos</em></span>
-      <span class="case-tags">Markenentwicklung · Verpackung · Social Media</span>
-    </button>
-    <button class="case" data-case="ew-hoefe">
-      <span class="case-img"><img src="/images-ew-hoefe-page-1.webp" alt="Titelseite des Magazins Connected für EW Höfe" loading="lazy"></span>
-      <span class="case-meta mono"><span>002</span><span>2025</span></span>
-      <span class="case-title">Connected <em>– EW Höfe</em></span>
-      <span class="case-tags">Magazin · Editorial Design</span>
-    </button>
-    <button class="case" data-case="luzern">
-      <span class="case-img"><img src="/images-luzern-plakat-page-1.webp" alt="F200-Plakat für Kurzferien in Luzern" loading="lazy"></span>
-      <span class="case-meta mono"><span>003</span><span>2025–2026</span></span>
-      <span class="case-title">Luzern <em>entdecken</em></span>
-      <span class="case-tags">Plakat · Infografik</span>
-    </button>
-  </div>
-
-  <div class="room-exit">
-    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
-    <a class="door door-next" href="#fotos" style="--tone:#2a2622" aria-label="Nächste Tür: Die Dunkelkammer"><span class="door-leaf dark"><span class="mono">Nächste Tür</span><strong>Die Dunkel&shy;kammer</strong><i class="knob"></i></span></a>
-  </div>
-</section>
-
-<!-- 02 FOTOS -->
-<section class="section room darkroom" id="fotos" hidden>
-  <i class="safelight" aria-hidden="true"></i>
-  <div class="sec-head"><span class="mono room-sign"><b>Raum 02</b><span>Die Dunkelkammer</span><span>Achtung, Licht</span></span><h2>Foto&shy;grafie<em>.</em></h2><p>Natur, Bildmontage und eine Serie über Oldtimer. Antippen für Vollbild und Aufnahmedaten.</p></div>
-  <div class="strip" id="strip" tabindex="0" aria-label="Fotos, seitlich scrollbar"></div>
-  <div class="strip-ctrl"><button type="button" data-strip="-1" aria-label="Zurück">←</button><span class="mono" id="stripCount">01 / 08</span><button type="button" data-strip="1" aria-label="Weiter">→</button></div>
-
-  <div class="room-exit">
-    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
-    <a class="door door-next" href="#kino" style="--tone:#5a1f1a" aria-label="Nächste Tür: Der Kinosaal"><span class="door-leaf red"><span class="mono">Nächste Tür</span><strong>Der Kinosaal</strong><i class="knob"></i></span></a>
-  </div>
-</section>
-
-<!-- 03 KINO & HÖRRAUM -->
-<section class="section room cinema" id="kino" hidden>
-  <i class="beam" aria-hidden="true"></i>
-  <div class="sec-head"><span class="mono room-sign"><b>Raum 03</b><span>Der Kinosaal</span><span>Heute im Programm</span></span><h2>Bilder in <em>Bewegung.</em></h2></div>
-  <div class="screen">
-    <div class="screen-frame">
-      <video id="film" controls playsinline preload="none" poster="/images-projects-uek-video.jpg"><source src="/video-uek-modul-267.mp4" type="video/mp4"></video>
-    </div>
-    <div class="reels" role="tablist" aria-label="Filme">
-      <button role="tab" aria-selected="true" data-film="0"><span class="mono">Film 01 · 3:13</span><strong>ÜK – Modul 267</strong><small>Videoprojekt aus dem überbetrieblichen Kurs.</small></button>
-      <button role="tab" aria-selected="false" data-film="1"><span class="mono">Film 02 · 2:53</span><strong>Der Weg eines Auftrags</strong><small>Animierter Erklärfilm: Konzept, Illustration, Animation, Voice-over und Postproduktion. Schulprojekt Modul 266.</small></button>
-    </div>
-  </div>
-
-
-  <div class="room-exit">
-    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
-    <a class="door door-next" href="#podcast" style="--tone:#6f8467" aria-label="Nächste Tür: Der Hörraum"><span class="door-leaf green"><span class="mono">Nächste Tür</span><strong>Der Hörraum</strong><i class="knob"></i></span></a>
-  </div>
-</section>
-<!-- 04 HÖRRAUM -->
-<section class="section room studio" id="podcast" hidden>
-  <div class="sec-head"><span class="mono room-sign"><b>Raum 04</b><span>Der Hörraum</span><span class="onair-sign" id="onAir">On Air</span></span><h2>Hör <em>rein.</em></h2></div>
-  <div class="podcast">
-    <div class="podcast-copy"><h3>SwissSkills.<br><em>Chiara zu Gast.</em></h3><p>Mein eigener Schul-Podcast. Ich führe durch die Folge, Chiara ist zu Gast. 25:49 Minuten.</p></div>
-    <div class="player">
-      <button type="button" class="vinyl" id="podPlay" aria-label="Podcast abspielen"><span>ms<small>Seite A</small></span></button>
-      <div class="player-body">
-        <div class="mono player-top"><span><i class="dot"></i><span id="podState">Bereit</span></span><span>Folge 001</span></div>
-        <div class="wave" id="wave" aria-hidden="true"></div>
-        <input type="range" id="podSeek" min="0" max="1549" step="1" value="0" aria-label="Wiedergabeposition">
-        <div class="mono player-time"><span id="podTime">0:00</span><span id="podDur">25:49</span></div>
-      </div>
-      <audio id="pod" preload="none" src="/audio-swissskills-mason-chiara.mp3"></audio>
-    </div>
-  </div>
-
-  <div class="room-exit">
-    <button type="button" class="exit-foyer" data-exit><span aria-hidden="true">←</span> Zurück ins Foyer</button>
-    <a class="door door-next" href="#arbeiten" style="--tone:#d9cbb0" aria-label="Nächste Tür: Das Atelier"><span class="door-leaf"><span class="mono">Nächste Tür</span><strong>Das Atelier</strong><i class="knob"></i></span></a>
-  </div>
-</section>
-
-
-</div>
 </main>
 
-<footer class="foot mono"><a href="#start" class="brand">ms</a><span>© 2026 Mason Schindler</span><a href="#start">Nach oben ↑</a></footer>
+<footer class="footer" data-theme="dark">
+  <div class="foot-row wrap mono">
+    <span>© 2026 Mason Schindler</span>
+    <span>Luzern, <time data-clock>--:--</time></span>
+    <a class="roll" href="https://www.linkedin.com/in/mason-schindler-898aa8208/" target="_blank" rel="noopener noreferrer"><span data-t="LinkedIn">LinkedIn</span></a>
+    <a class="roll" href="#start"><span data-t="Nach oben ↑">Nach oben ↑</span></a>
+  </div>
+  <p class="foot-name" aria-hidden="true"><span class="fn-in">Mason Schindler</span></p>
+</footer>
+
+<!-- Menü (mobil) -->
+<dialog class="menu" id="menu" aria-label="Menü">
+  <div class="menu-bar"><span class="mono">Menü</span><button type="button" class="menu-close" data-close aria-label="Menü schliessen"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <nav class="menu-links" aria-label="Menü">
+    <a href="#arbeiten"><span class="mono">01</span><span class="ml">Arbeiten</span></a>
+    <a href="#fotos"><span class="mono">02</span><span class="ml">Fotos</span></a>
+    <a href="#film"><span class="mono">03</span><span class="ml">Film</span></a>
+    <a href="#podcast"><span class="mono">04</span><span class="ml">Podcast</span></a>
+    <a href="#lebenslauf"><span class="mono">05</span><span class="ml">CV</span></a>
+    <a href="#kontakt"><span class="mono">06</span><span class="ml">Kontakt</span></a>
+  </nav>
+  <p class="menu-foot mono"><span>Luzern <time data-clock>--:--</time></span><a href="mailto:mace.schindler@icloud.com">E-Mail</a></p>
+</dialog>
 
 <!-- Projektansicht -->
-<dialog class="case-dialog" id="caseDialog" aria-labelledby="caseTitle">
-  <div class="cd-bar mono"><span id="caseKicker"></span><button type="button" data-close aria-label="Schliessen">Schliessen ×</button></div>
-  <div class="cd-body">
-    <div class="cd-info">
+<dialog class="case" id="caseDialog" aria-labelledby="caseTitle" data-lenis-prevent>
+  <div class="case-bar mono"><span id="caseKicker"></span><button type="button" class="case-close" data-close aria-label="Projekt schliessen"><span>Schliessen</span><svg class="i"><use href="#i-close"/></svg></button></div>
+  <div class="case-body">
+    <header class="case-head">
       <h2 id="caseTitle"></h2>
-      <p id="caseDesc"></p>
-      <dl id="caseFacts"></dl>
-    </div>
-    <div class="cd-gallery" id="caseGallery"></div>
+      <div class="case-info">
+        <p id="caseDesc"></p>
+        <dl id="caseFacts"></dl>
+      </div>
+    </header>
+    <div class="case-gallery" id="caseGallery"></div>
+    <div class="case-next"><button type="button" id="caseNext"><span class="mono">Nächstes Projekt</span><strong id="caseNextTitle"></strong></button></div>
   </div>
 </dialog>
 
 <!-- Bildbetrachter -->
 <dialog class="lightbox" id="lightbox" aria-label="Bild in Vollansicht">
-  <div class="lb-bar mono"><span id="lbTitle"></span><button type="button" data-close aria-label="Schliessen">×</button></div>
+  <div class="lb-bar mono"><span id="lbTitle"></span><span id="lbCount"></span><button type="button" data-close aria-label="Schliessen"><svg class="i"><use href="#i-close"/></svg></button></div>
   <figure class="lb-stage"><img id="lbImg" alt=""><figcaption id="lbExif" class="mono"></figcaption></figure>
-  <div class="lb-nav mono"><button type="button" data-lb="-1" aria-label="Vorheriges Bild">←</button><span id="lbCount"></span><button type="button" data-lb="1" aria-label="Nächstes Bild">→</button></div>
+  <div class="lb-nav"><button type="button" data-lb="-1" aria-label="Vorheriges Bild"><svg class="i"><use href="#i-left"/></svg></button><button type="button" data-lb="1" aria-label="Nächstes Bild"><svg class="i"><use href="#i-right"/></svg></button></div>
 </dialog>
 
 <!-- Snake -->
 <dialog class="snake" id="snake" aria-labelledby="snakeTitle">
-  <div class="sn-bar mono"><span>Gefunden! / Easter Egg 001</span><button type="button" data-close aria-label="Snake schliessen">×</button></div>
-  <h2 id="snakeTitle">Snake.</h2>
+  <div class="sn-bar mono"><span>Easter Egg 001</span><button type="button" data-close aria-label="Snake schliessen"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <h2 id="snakeTitle">Snake<em>.</em></h2>
   <div class="sn-score mono"><span>Äpfel <b id="snScore">00</b></span><span>Rekord <b id="snBest">00</b></span></div>
-  <div class="sn-field"><canvas id="snCanvas" width="360" height="360" aria-label="Snake-Spielfeld. Pfeiltasten, WASD oder Wischen."></canvas><button type="button" class="sn-start" id="snStart">Losspielen ↗</button></div>
-  <div class="sn-pad"><button type="button" data-dir="left" aria-label="Links">←</button><button type="button" data-dir="up" aria-label="Hoch">↑</button><button type="button" data-dir="down" aria-label="Runter">↓</button><button type="button" data-dir="right" aria-label="Rechts">→</button></div>
+  <div class="sn-field"><canvas id="snCanvas" width="360" height="360" aria-label="Snake-Spielfeld. Pfeiltasten, WASD oder Wischen."></canvas><button type="button" class="sn-start" id="snStart">Losspielen</button></div>
+  <div class="sn-pad"><button type="button" data-dir="left" aria-label="Links"><svg class="i"><use href="#i-left"/></svg></button><button type="button" data-dir="up" aria-label="Hoch"><svg class="i"><use href="#i-up"/></svg></button><button type="button" data-dir="down" aria-label="Runter"><svg class="i"><use href="#i-down"/></svg></button><button type="button" data-dir="right" aria-label="Rechts"><svg class="i"><use href="#i-right"/></svg></button></div>
 </dialog>
 
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
 <script src="app.js" defer></script>
 </body>
 </html>

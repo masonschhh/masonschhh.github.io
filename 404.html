@@ -1,3 +1,37 @@
 <!DOCTYPE html>
-<html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Nicht gefunden — Mason Schindler</title><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head>
-<body><main class="hero" style="justify-content:center"><div class="hero-top mono"><span>404</span><span>Mason Schindler</span></div><h1 class="hero-name">Falsche<br><em>Tür.</em></h1><p class="hero-claim" style="margin:28px 0">Diesen Raum gibt es nicht.</p><a class="nav-cta" style="align-self:start" href="/">Zur Startseite ↗</a></main></body></html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#eeece7">
+<title>Nicht gefunden — Mason Schindler</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<style>
+  @font-face { font-family: "Geist"; src: url("/fonts/geist.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Geist Mono"; src: url("/fonts/geist-mono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Instrument Serif"; src: url("/fonts/instrument-serif-italic.woff2") format("woff2"); font-style: italic; font-display: swap; }
+  .nf { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; padding: 0 var(--pad) var(--pad); }
+  .nf-bar { height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; }
+  .nf-num { font-size: clamp(140px, 38vw, 640px); font-weight: 650; letter-spacing: -.08em; line-height: .78; margin-left: -.05em; }
+  .nf-num em { color: var(--accent); letter-spacing: -.04em; }
+  .nf-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
+  .nf-foot p { font-size: clamp(22px, 2.6vw, 40px); letter-spacing: -.035em; line-height: 1.1; font-weight: 500; }
+  .nf .btn { --btn-fg: var(--paper); color: var(--ink); }
+</style>
+</head>
+<body data-theme="light">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol></svg>
+<main class="nf">
+  <div class="nf-bar"><a class="brand" href="/"><i class="brand-dot"></i><span>Mason Schindler</span></a><span class="mono">Fehler 404</span></div>
+  <div>
+    <h1 class="nf-num" aria-label="404">4<em>0</em>4</h1>
+    <div class="nf-foot">
+      <p>Diese Seite gibt’s <em>nicht.</em></p>
+      <a class="btn" href="/"><span>Zur Startseite</span><svg class="i"><use href="#i-ne"/></svg></a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

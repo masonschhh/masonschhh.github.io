@@ -528,7 +528,7 @@ if (motion) {
 function heroIntro() {
   const tl = G.timeline({ onComplete: () => G.set(heroChars, { clearProps: "transform" }) });
   tl.fromTo(heroChars, { yPercent: 105 }, { yPercent: 0, duration: 1.1, ease: "expo.out", stagger: .03 })
-    .fromTo([".hero-intro", ".hero-hint", ".rotator", ".badge"], { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "expo.out", stagger: .08 }, .25)
+    .fromTo([".hero-intro", ".rotator", ".badge"], { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "expo.out", stagger: .08 }, .25)
     .fromTo($$("#nav > *"), { y: -24, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "expo.out", stagger: .05, clearProps: "transform,opacity" }, .2);
   return tl;
 }
@@ -767,7 +767,7 @@ const startTarget = startHash.length > 1 ? $(startHash) : null;
 if (hasG) {
   if (motion) {
     // Reihenfolge = Reihenfolge auf der Seite: der Pin der Fotostrecke muss vor allem darunter entstehen.
-    initTrail(); initHeroScroll(); initBands(); initCards(); initPhotos(); initReveals(); initFilm(); initFooter(); initCursor(); initMagnetic();
+    initHeroScroll(); initBands(); initCards(); initPhotos(); initReveals(); initFilm(); initFooter(); initCursor(); initMagnetic();
   }
   initThemes();
   ST.sort?.();

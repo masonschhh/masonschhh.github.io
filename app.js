@@ -527,7 +527,7 @@ if (motion) {
 
 function heroIntro() {
   const tl = G.timeline({ onComplete: () => G.set(heroChars, { clearProps: "transform" }) });
-  tl.fromTo(heroChars, { yPercent: 105 }, { yPercent: 0, duration: 1.5, ease: "expo.out", stagger: .045 })
+  tl.fromTo(heroChars, { yPercent: 105 }, { yPercent: 0, duration: 1.1, ease: "expo.out", stagger: .03 })
     .fromTo([".hero-intro", ".hero-hint", ".rotator", ".badge"], { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "expo.out", stagger: .08 }, .25)
     .fromTo($$("#nav > *"), { y: -24, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "expo.out", stagger: .05, clearProps: "transform,opacity" }, .2);
   return tl;
@@ -540,7 +540,7 @@ function initTrail() {
     im.className = "trail-img"; im.alt = ""; im.decoding = "async"; im.draggable = false;
     im.src = `thumbs/${n}.webp`;
     im.style.setProperty("--r", r);
-    im.style.setProperty("--w", r < 1 ? "clamp(110px, 11.5vw, 210px)" : "clamp(150px, 16vw, 300px)");
+    im.style.setProperty("--w", r < 1 ? "clamp(90px, 8vw, 150px)" : "clamp(120px, 11vw, 210px)");
     wrap.append(im);
     return im;
   });
@@ -548,19 +548,19 @@ function initTrail() {
   function spawn(x, y, vx = 0, vy = 0) {
     const im = imgs[i++ % imgs.length];
     G.killTweensOf(im);
-    G.set(im, { x, y, xPercent: -50, yPercent: -50, zIndex: z++, opacity: 1, scale: .4, rotation: G.utils.random(-14, 14) });
-    G.to(im, { scale: 1, x: x + vx * .35, y: y + vy * .35, rotation: G.utils.random(-5, 5), duration: .9, ease: "expo.out" });
-    G.to(im, { opacity: 0, scale: .75, duration: .7, ease: "power2.in", delay: .6 });
+    G.set(im, { x, y, xPercent: -50, yPercent: -50, zIndex: z++, opacity: 1, scale: .8, rotation: 0 });
+    G.to(im, { scale: 1, duration: .6, ease: "power3.out" });
+    G.to(im, { opacity: 0, duration: .6, ease: "power2.out", delay: .5 });
   }
   hero.addEventListener("pointermove", e => {
     if (e.pointerType !== "mouse" || body.classList.contains("locked")) return;
     const r = hero.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
     if (!last) { last = { x, y }; return; }
     const dx = x - last.x, dy = y - last.y;
-    if (Math.hypot(dx, dy) > Math.max(90, innerWidth * .075)) { spawn(x, y, dx, dy); last = { x, y }; }
+    if (Math.hypot(dx, dy) > Math.max(170, innerWidth * .13)) { spawn(x, y, dx, dy); last = { x, y }; }
   });
   hero.addEventListener("pointerleave", () => { last = null; });
-  if (!fine && "IntersectionObserver" in window) {
+  if (false) {
     let timer = null;
     const auto = () => {
       const r = hero.getBoundingClientRect();
@@ -583,15 +583,15 @@ function initRotator() {
     const a = words[k]; k = (k + 1) % words.length; const b = words[k];
     G.to(a, { yPercent: -110, duration: 1, ease: "expo.inOut" });
     G.fromTo(b, { yPercent: 110 }, { yPercent: 0, duration: 1, ease: "expo.inOut" });
-    G.delayedCall(2.3, step);
+    G.delayedCall(3.6, step);
   };
-  G.delayedCall(2.6, step);
+  G.delayedCall(3.6, step);
 }
 
 function initHeroScroll() {
   const st = () => ({ trigger: ".hero", start: "top top", end: "bottom top", scrub: true });
-  G.to(".hn-1 .hn-in", { xPercent: -16, ease: "none", scrollTrigger: st() });
-  G.to(".hn-2 .hn-in", { xPercent: 10, ease: "none", scrollTrigger: st() });
+  G.to(".hn-1 .hn-in", { xPercent: -5, ease: "none", scrollTrigger: st() });
+  G.to(".hn-2 .hn-in", { xPercent: 3, ease: "none", scrollTrigger: st() });
   G.fromTo(".hero-top", { y: 0, opacity: 1 }, { y: -100, opacity: 0, ease: "none", immediateRender: false, scrollTrigger: { trigger: ".hero", start: "top top", end: "40% top", scrub: true } });
   G.fromTo(".hero-meta", { y: 0, opacity: 1 }, { y: -60, opacity: 0, ease: "none", immediateRender: false, scrollTrigger: { trigger: ".hero", start: "10% top", end: "55% top", scrub: true } });
 }
@@ -610,7 +610,7 @@ function initBands() {
   G.ticker.add((time, dt) => {
     if (!visible) return;
     if (Math.abs(vel) > .3) sign = vel > 0 ? 1 : -1;
-    const speed = (.055 + Math.min(Math.abs(vel) * .028, .7)) * Math.min(dt, 50);
+    const speed = (.03 + Math.min(Math.abs(vel) * .008, .15)) * Math.min(dt, 50);
     bands.forEach(b => {
       b.x += b.dir * sign * speed;
       if (b.x <= -b.w) b.x += b.w;
@@ -619,8 +619,6 @@ function initBands() {
     });
     vel *= .9;
   });
-  G.fromTo(".band-a", { rotation: -7 }, { rotation: -3.2, ease: "none", scrollTrigger: { trigger: sec, start: "top bottom", end: "bottom top", scrub: true } });
-  G.fromTo(".band-b", { rotation: 6 }, { rotation: 2.2, ease: "none", scrollTrigger: { trigger: sec, start: "top bottom", end: "bottom top", scrub: true } });
 }
 
 function initReveals() {
@@ -792,7 +790,7 @@ if (!motion) {
   try { seen = sessionStorage.getItem("ms-intro") === "1"; sessionStorage.setItem("ms-intro", "1"); } catch {}
   const num = $("#ldNum"), bar = $(".ld-bar i"), counter = { v: 0 };
   const render = () => { num.textContent = Math.round(counter.v); bar.style.transform = `scaleX(${counter.v / 100})`; };
-  const minTime = seen ? 350 : 1500;
+  const minTime = seen ? 200 : 700;
   G.to(counter, { v: 86, duration: minTime / 1000, ease: "power2.inOut", onUpdate: render });
   G.fromTo(".ld-inner > *", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "expo.out", stagger: .08 });
   const firstImgs = $$(".trail-img").slice(0, 4).map(im => (im.decode ? im.decode().catch(() => {}) : null));
@@ -802,10 +800,10 @@ if (!motion) {
     afterLayout();
     if (startTarget) lenis ? lenis.scrollTo(startTarget, { immediate: true, force: true }) : startTarget.scrollIntoView();
     else scrollTo(0, 0);
-    G.to(counter, { v: 100, duration: .45, ease: "power2.out", onUpdate: render, onComplete: () => {
+    G.to(counter, { v: 100, duration: .25, ease: "power2.out", onUpdate: render, onComplete: () => {
       const tl = G.timeline({ onComplete: () => { loader.remove(); lenis?.start(); initRotator(); } });
-      tl.to(".ld-inner", { yPercent: -12, opacity: 0, duration: .7, ease: "power3.in" })
-        .to(loader, { clipPath: "inset(0% 0% 100% 0%)", duration: 1.1, ease: "expo.inOut" }, "-=.25")
+      tl.to(".ld-inner", { yPercent: -12, opacity: 0, duration: .4, ease: "power3.in" })
+        .to(loader, { clipPath: "inset(0% 0% 100% 0%)", duration: .8, ease: "expo.inOut" }, "-=.2")
         .add(heroIntro(), "-=.6");
     } });
   });

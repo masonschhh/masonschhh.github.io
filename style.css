@@ -183,7 +183,8 @@ a:hover > .roll > span, .roll:hover > span, .roll:focus-visible > span, a:focus-
 .js .rot > em:not(:first-child) { transform: translateY(110%); }
 
 .badge { position: relative; flex: none; width: clamp(96px, 8.4vw, 132px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; }
-.badge-ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 16s linear infinite; }
+.badge-ring { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform 1.6s var(--ease); }
+.badge:hover .badge-ring { transform: rotate(120deg); }
 .badge-ring text { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; fill: currentColor; }
 .badge-arrow { width: 26px; height: 26px; transition: transform .6s var(--ease); }
 .badge::before { content: ""; position: absolute; inset: 24%; border-radius: 50%; background: var(--hi); transform: scale(0); transition: transform .6s var(--ease); }

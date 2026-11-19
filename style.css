@@ -227,10 +227,14 @@ a:hover > .roll > span, .roll:hover > span, .roll:focus-visible > span, a:focus-
 .about { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding-block: clamp(80px, 12vw, 200px) clamp(80px, 12vw, 200px); }
 .about .sec-label { grid-column: 1 / 4; padding-top: .9em; }
 .me { padding-block: 0 clamp(90px, 11vw, 180px); }
-.me-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); column-gap: var(--gap); align-items: end; }
-.me-copy { padding-left: var(--gap); }
-.me-text { max-width: 24em; margin-top: clamp(20px, 2.4vw, 36px); font-size: clamp(19px, 1.7vw, 26px); line-height: 1.3; letter-spacing: -.02em; }
-.about-photo { width: min(100%, 240px); }
+.me-title { margin-bottom: clamp(36px, 5vw, 72px); }
+.me-grid { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(24px, 4vw, 72px); align-items: start; }
+.about-photo { width: clamp(110px, 11vw, 160px); }
+.bio { border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); max-width: 760px; }
+.bio > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
+.bio dt { opacity: .55; }
+.bio dd { font-size: clamp(17px, 1.5vw, 22px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; }
+.bio small { font-size: .72em; font-weight: 400; opacity: .6; margin-left: 6px; }
 .ap-frame { display: block; aspect-ratio: 2 / 3; overflow: hidden; border-radius: 6px; background: #dcd9d2; }
 .ap-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .about-photo:hover .ap-frame img { transform: scale(1.04); }
@@ -534,9 +538,9 @@ html:not(.themed) .footer { margin-inline: 0; padding-inline: var(--pad); }
 
   .about { display: block; }
   .about .sec-label { padding-top: 0; }
-  .me-grid { display: block; }
-  .me-copy { padding-left: 0; margin-top: 28px; }
-  .about-photo { width: min(46vw, 200px); }
+  .me-grid { column-gap: 16px; }
+  .about-photo { width: 92px; }
+  .bio > div { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
   .about-photo figcaption { flex-direction: column; gap: 2px; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
 

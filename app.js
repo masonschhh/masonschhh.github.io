@@ -413,7 +413,7 @@ function drawViz(t) {
     else target = .1 + .07 * Math.sin(t * .0013 + i * .33) + .1 * (((i * 37) % 11) / 11);
     levels[i] += (target - levels[i]) * (reduced ? 1 : .16);
     const bh = Math.max(3, Math.min(1, levels[i]) * h);
-    vctx.fillStyle = (i + .5) / BARS <= prog ? "#8AA9D8" : "rgba(238,236,231,.82)";
+    vctx.fillStyle = (i + .5) / BARS <= prog ? "#2E5AAC" : "rgba(238,236,231,.82)";
     const x = i * (bw + gap), y = (h - bh) / 2;
     vctx.beginPath();
     if (vctx.roundRect) vctx.roundRect(x, y, bw, bh, Math.min(bw / 2, 3)); else vctx.rect(x, y, bw, bh);
@@ -447,7 +447,7 @@ if (!reduced && "IntersectionObserver" in window) {
   function updateScore() { $("#snScore").textContent = pad2(score); $("#snBest").textContent = pad2(best); }
   function draw() {
     for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { ctx.fillStyle = (x + y) % 2 ? "#181818" : "#1f1f1f"; ctx.fillRect(x * C, y * C, C, C); }
-    if (food) { ctx.fillStyle = "#8AA9D8"; ctx.beginPath(); ctx.arc(food[0] * C + C / 2, food[1] * C + C / 2, C * .34, 0, 7); ctx.fill(); }
+    if (food) { ctx.fillStyle = "#2E5AAC"; ctx.beginPath(); ctx.arc(food[0] * C + C / 2, food[1] * C + C / 2, C * .34, 0, 7); ctx.fill(); }
     snake.forEach((p, i) => {
       ctx.fillStyle = i ? "#eeece7" : "#ffffff";
       ctx.beginPath();
